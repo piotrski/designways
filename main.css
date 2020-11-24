@@ -8,7 +8,6 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
@@ -19,13 +18,18 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
           text-size-adjust: none;
 }
 
+html {
+  font-size: 10px;
+}
+
 footer, header, nav, section, main {
   display: block;
 }
 
 body {
   line-height: 1;
-  font-size: 10px;
+  font-size: 16px;
+  font-family: Manrope;
 }
 
 ol, ul {
@@ -53,24 +57,210 @@ input {
 
 .page {
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
   background-color: #dddd;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(46.5rem, 1fr) minmax(12rem, 1fr);
-      grid-template-rows: minmax(46.5rem, 1fr) minmax(12rem, 1fr);
+  -ms-grid-rows: minmax(46.5rem, 2fr) minmax(12rem, 1fr);
+      grid-template-rows: minmax(46.5rem, 2fr) minmax(12rem, 1fr);
 }
 
 .container {
-  max-width: 98em;
+  max-width: 98rem;
   min-height: 50px;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 17rem;
+}
+
+.violet {
+  background-color: #7D4CE5;
+  background-image: url("images/bg-trop.png");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.text__h2 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  margin: 40px 0;
+  line-height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.text__paragraph {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 78rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.text__paragraph--checkbox {
+  font-size: 1.6rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 3rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form__text {
+  background: #FFFFFF;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  border: 1px solid #F3F3F3;
+  padding: 2.4rem 2.8rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(158, 94, 94, 0.01), 0px 15px 60px -28px rgba(23, 23, 28, 0.17);
+          box-shadow: 0px 4px 4px rgba(158, 94, 94, 0.01), 0px 15px 60px -28px rgba(23, 23, 28, 0.17);
+  border-radius: 13px 0 0 13px;
+}
+
+.form__button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2C2856), to(#2C2856)), -webkit-gradient(linear, left bottom, left top, from(#312B7A), to(#312B7A)), -webkit-gradient(linear, left bottom, left top, from(#3051FF), to(#3051FF)), #2D2DFF;
+  background: linear-gradient(0deg, #2C2856, #2C2856), linear-gradient(0deg, #312B7A, #312B7A), linear-gradient(0deg, #3051FF, #3051FF), #2D2DFF;
+  -webkit-box-shadow: 0px 4px 4px rgba(158, 94, 94, 0.01), 0px 15px 60px -28px rgba(23, 23, 28, 0.17);
+          box-shadow: 0px 4px 4px rgba(158, 94, 94, 0.01), 0px 15px 60px -28px rgba(23, 23, 28, 0.17);
+  border-radius: 0 13px 13px 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+}
+
+.form__rodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form__checkbox {
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin: 2.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.list {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #8A8CB9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  opacity: 0.6;
+}
+
+.list__element {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0;
+}
+
+.list__image {
+  margin-right: 20px;
+}
+
+.list__span {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-left: 20px;
+  padding: 4px 8px;
+  color: #FFFFFF;
+  background: #8A8CB9;
+  opacity: 0.8;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=main.css.map */
