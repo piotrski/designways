@@ -1,6 +1,5 @@
-<style>
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap')
-</style>
 
 *, *:before, *:after
     box-sizing: border-box
@@ -44,7 +43,15 @@ input
 //  PLAIN KOD
 
 .page
-    width: 100vh
-    min-height: 100vh
+    width: 100vw
+    max-height: 100vh
     background-color: #dddd
     display: grid
+    justify-content: center
+    align-content: center
+    grid-template-columns: 1fr
+    grid-template-rows: minmax(46.5rem, 1fr) minmax(12rem,1fr)
+.container
+    max-width: 98em
+    min-height: 50px
+    background-color: red
