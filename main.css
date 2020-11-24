@@ -119,6 +119,12 @@ input {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .violet {
+    background-size: cover;
+  }
+}
+
 .text__h2 {
   font-family: Manrope;
   font-style: normal;
@@ -298,8 +304,8 @@ input {
 
 @media (max-width: 576px) {
   .list__element {
-    -ms-flex-preferred-size: 80%;
-        flex-basis: 80%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
