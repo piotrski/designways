@@ -69,8 +69,8 @@ input {
           align-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(46.5rem, 2fr) minmax(12rem, 1fr);
-      grid-template-rows: minmax(46.5rem, 2fr) minmax(12rem, 1fr);
+  -ms-grid-rows: minmax(46.5rem, 5fr) minmax(12rem, 2fr);
+      grid-template-rows: minmax(46.5rem, 5fr) minmax(12rem, 2fr);
 }
 
 .container {
