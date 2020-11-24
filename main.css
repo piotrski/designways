@@ -74,8 +74,8 @@ input {
 
 @media (max-width: 768px) {
   .page {
-    -ms-grid-rows: minmax(46.5rem, 4fr) minmax(45rem, 2fr);
-        grid-template-rows: minmax(46.5rem, 4fr) minmax(45rem, 2fr);
+    -ms-grid-rows: minmax(46.5rem, 7fr) minmax(45rem, 4fr);
+        grid-template-rows: minmax(46.5rem, 7fr) minmax(45rem, 4fr);
   }
 }
 
