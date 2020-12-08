@@ -317,6 +317,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   color: #FFFFFF;
+  border: none;
 }
 
 .form__button:disabled {
