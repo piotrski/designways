@@ -333,6 +333,14 @@ input {
   }
 }
 
+.form__button--minimal {
+  width: 40%;
+  display: block;
+  max-height: 60px;
+  margin: 40px;
+  border-radius: 15px;
+}
+
 .form__rodo {
   display: -webkit-box;
   display: -ms-flexbox;

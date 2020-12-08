@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Magic Hello World 🌎</title>
+    <title>DesignWays Hub - edukacyjny hub dla designerów</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -91,6 +91,8 @@
               w jednym miejscu. Zostaw swój adres email i poznaj wydarzenia, które
               pomogą Ci w rozwoju!
             </p>
+            <button class="form__button form__button--minimal" onclick="handleLogout()">Logout</button>
+
                 
             
 
@@ -122,8 +124,7 @@
           </div>
         </div>
       </main>
-                  <h1>Current user: ${userMetadata.email}</h1>
-                  <button onclick="handleLogout()">Logout</button>
+  
                 `;
         }
 
@@ -149,7 +150,80 @@
     </script>
   </head>
   <body onload="render()">
-    <div id="app">Loading...</div>
+    <div id="app">
+      <main class="page">
+        <div class="violet">
+          <div class="container">
+            <img
+              class="logo spacer"
+              src="images/Logo_horizontal_new.svg"
+              alt=""
+            />
+            <h2 class="text__h2">Cały Twój rozwój w jednym miejscu</h2>
+            <p class="text__paragraph">
+              Szkolenia, warsztaty, konferencje, meetupy i webinary. Cały Twój
+              rozwój w jednym miejscu. Zostaw swój adres email i poznaj
+              wydarzenia, które pomogą Ci w rozwoju!
+            </p>
+            <form class="form" onsubmit="handleLogin(event)">
+              <input
+                type="email"
+                class="form__text"
+                name="email"
+                required="required"
+                placeholder="Enter your email"
+              />
+              <button type="submit" class="form__button">
+                Zgarnij dostęp do bazy
+              </button>
+            </form>
+            <div class="form__rodo">
+              <input
+                type="checkbox"
+                name="newsletter"
+                value="rodo"
+                class="form__checkbox"
+                checked
+              />
+              <label
+                for="checkbox"
+                class="text__paragraph text__paragraph--checkbox"
+              >
+                Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany
+                przeze mnie adres e-mail treści zgodnie z polityka
+                prywatności.</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="container">
+            <ul class="list">
+              <li class="list__element list__element--active">
+                <img src="images/check-active.svg" class="list__image" alt="" />
+                Lista wydarzeń z branży kreatywnej
+              </li>
+              <li class="list__element">
+                <img src="images/check.svg" class="list__image" alt="" />
+                Polecane materiały edukacyjne i kursy<span class="list__span"
+                  >Wkrótce</span
+                >
+              </li>
+              <li class="list__element">
+                <img src="images/check.svg" class="list__image" alt="" />
+                Spersonalizowane rekomendacje
+                <span class="list__span">Wkrótce</span>
+              </li>
+              <li class="list__element">
+                <img src="images/check.svg" class="list__image" alt="" />
+                Zniżki i program lojalnościowy
+                <span class="list__span">Wkrótce</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
