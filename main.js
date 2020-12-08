@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+setTimeout(function () {
   const rodoHandler = document.querySelector(".form__rodo");
   let rodoCheckbox = document.querySelector(".form__checkbox");
   const buttonCheck = document.querySelector(".form__button");
@@ -15,4 +15,4 @@ document.addEventListener("DOMContentLoaded", function () {
   rodoChange();
 
   rodoHandler.addEventListener("click", rodoChange);
-});
+}, 2000);
