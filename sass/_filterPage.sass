@@ -1,0 +1,125 @@
+.filter
+    &__main
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: 3fr 2fr 1fr
+        padding: 40px 60px
+        align-items: flex-start
+        background: #FFFFFF
+        min-height: 140px
+        margin-top: -100px
+        width: 100%
+        border: 1px solid #F3F3F3
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01), 0px 15px 60px -28px rgba(23, 23, 28, 0.17)
+        border-radius: 13px
+        margin-bottom: 40px
+
+.tag
+    &__container
+    &__single
+        background: rgba(232, 230, 243, 0.6)
+        border: none
+        border-radius: 6px
+        padding: 8px 18px
+        margin: 10px 10px 0 0
+        font-family: Manrope
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 19px
+        text-align: center
+        color: #575983
+        &--active
+            background: linear-gradient(0deg, #2C2856, #2C2856), linear-gradient(0deg, #312B7A, #312B7A), linear-gradient(0deg, #3051FF, #3051FF), #2D2DFF
+            border-radius: 6px
+            font-family: Manrope
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 19px
+            align-items: center
+            color: #FFFFFF
+
+.lecture
+    width: 100%
+    min-height: 50px
+    background: #FFFFFF
+    border: 1px solid #CED3E0
+    box-sizing: border-box
+    border-radius: 12px
+    margin-bottom: 20px
+    padding: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__half
+        width: calc(50% - 1.25rem)
+.AddToDatabase
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    align-content: center
+    min-height: 27.5rem
+    border-radius: 1.6rem
+    margin: 4rem auto
+    background-color: #7D4CE5
+    &__h3
+        font-family: Manrope
+        font-style: normal
+        font-weight: bold
+        font-size: 3.3rem
+        line-height: 120%
+        color: #FFFFFF
+        max-width: 500px
+    &__button
+        min-width: 37rem
+        height: 6rem
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-content: center
+        align-items: center
+        background: #2C2856
+        box-shadow: 0px 20px 32px -4px rgba(0, 0, 0, 0.23)
+        border-radius: 8px
+    &__buttonText
+        font-family: Manrope
+        font-style: normal
+        font-weight: bold
+        font-size: 1.8rem
+        line-height: 150%
+        margin: 0 20px
+        color: #FFFFFF
+.filterFooter
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    margin-top: 6rem
+    border-top: 1px solid rgba(206, 211, 224, .4)
+    padding: 6rem 0 6rem 0
+    &__footerHalf
+        width: 50%
+    &__rightFooter
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: flex-end
+        font-family: Manrope
+        font-style: normal
+        font-weight: 500
+        font-size: 1.6rem
+        line-height: 140%
+        text-align: center
+        letter-spacing: 0.02em
+        color: #575983
+    &__rightFooter > *
+        margin-left: 5rem
+    &__footerCopyrights
+        font-family: Manrope
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        margin-top: 10px
+        line-height: 100%
+        letter-spacing: 0.02em
+        color: #8A8CB9
