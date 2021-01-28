@@ -8,6 +8,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
     </style>
     <link rel="stylesheet" href="main.css" />
+    <script src="filter.js"></script>
   </head>
   <body>
     <header class="violet violet__filter display__column">
@@ -38,36 +39,57 @@
       <div class="tag__container">
         <h6 class="text__h6">Wybierz tematyke</h6>
         <div class="tag__tags">
-          <button class="tag__single">3D</button>
-          <button class="tag__single">Analityka</button>
-          <button class="tag__single">Animacje</button>
-          <button class="tag__single tag__single--active">Badania</button>
-          <button class="tag__single">Branding</button>
-          <button class="tag__single">Product design</button>
-          <button class="tag__single">Service design</button>
-          <button class="tag__single">UI</button>
-          <button class="tag__single">Wideo</button>
+          <button class="tag__single tagsFilter" data-key="3D">3D</button>
+          <button class="tag__single tagsFilter" data-key="Analityka">
+            Analityka
+          </button>
+          <button class="tag__single tagsFilter" data-key="Animacje">
+            Animacje
+          </button>
+          <button class="tag__single tagsFilter" data-key="Badania">
+            Badania
+          </button>
+          <button class="tag__single tagsFilter" data-key="Branding">
+            Branding
+          </button>
+          <button class="tag__single tagsFilter" data-key="Product design">
+            Product design
+          </button>
+          <button class="tag__single tagsFilter" data-key="Service design">
+            Service design
+          </button>
+          <button class="tag__single tagsFilter" data-key="UI">UI</button>
+          <button class="tag__single tagsFilter" data-key="UI">UX</button>
+          <button class="tag__single tagsFilter" data-key="Wideo">Wideo</button>
         </div>
       </div>
       <div class="tag__container">
         <h6 class="text__h6">Stopień zaawansowania:</h6>
         <div class="tag__tags">
-          <button class="tag__single">Początkujący</button>
-          <button class="tag__single tag__single--active">
+          <button class="tag__single tagsFilter" data-key="Początkujący">
+            Początkujący
+          </button>
+          <button class="tag__single tagsFilter" key="Średniozaawansowany">
             Średniozaawansowany
           </button>
-          <button class="tag__single">Zaawansowany</button>
+          <button class="tag__single tagsFilter" data-key="Zaawansowany">
+            Zaawansowany
+          </button>
         </div>
       </div>
       <div class="tag__container">
         <h6 class="text__h6">Cena:</h6>
         <div class="tag__tags">
-          <button class="tag__single">Darmowe</button>
-          <button class="tag__single tag__single--active">Płatne</button>
+          <button class="tag__single tagsFilter" data-key="Darmowe">
+            Darmowe
+          </button>
+          <button class="tag__single tagsFilter" data-key="Płatne">
+            Płatne
+          </button>
         </div>
       </div>
     </div>
-    <div class="container container--big">
+    <div class="container container--big" id="lecture">
       <div class="lecture">
         <div class="lecture__half">
           <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
@@ -227,6 +249,5 @@
         <img src="images/instagram-dark.svg" alt="" />
       </div>
     </footer>
-    <script src="main.js"></script>
   </body>
 </html>

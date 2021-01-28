@@ -500,6 +500,8 @@ input {
   line-height: 19px;
   text-align: center;
   color: #575983;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .tag__single--active {
@@ -518,7 +520,7 @@ input {
 }
 
 .tag__single--small {
-  margin: 0;
+  margin: 0 1rem 0 0;
   font-size: 1.2rem;
   padding: 0.6rem 1.2rem;
 }
