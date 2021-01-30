@@ -12,9 +12,8 @@ const eventList = [
     "Zakończenie wydarzenia": "4.2.2021 13:30",
     duration: "0:04",
     level: "Junior",
-    UX: false,
+
     productDesign: true,
-    UI: false,
     tags: ["UX", "Product Design"],
     language: "polski",
     certification: "Tak",
@@ -36,8 +35,6 @@ const eventList = [
     spots: "15",
     level: "Początkujący",
     UX: true,
-    productDesign: false,
-    UI: false,
     tags: ["UX"],
     free: true,
     certification: true,
@@ -67,53 +64,45 @@ const eventList = [
 ];
 window.addEventListener("DOMContentLoaded", (event) => {
   let filterClick = [...document.querySelectorAll(".tagsFilter")];
-  let filters = "";
+  let filterArray = {};
+  for (const key of filterClick) {
+    filterArray[key.dataset.key] = null;
+  }
 
   const filterElement = (e) => {
     e.target.classList.value.includes("tag__single--active")
       ? e.target.classList.remove("tag__single--active")
       : e.target.classList.add("tag__single--active");
+
+    const clickedElement = e.target.dataset.key.toString();
     let FilteredList;
-    let filters = {
-      free: null,
-      price: null,
-      UX: null,
-      productDesign: null,
-      UI: null,
-      level: "",
-      tags: ["UI"],
+
+    filterArray[`${clickedElement}`] == null
+      ? (filterArray[`${clickedElement}`] = true)
+      : (filterArray[`${clickedElement}`] = null);
+
+    console.log(filterArray);
+
+    const filterItem = (item) => {
+      for (const property in filterArray) {
+        if (item[`${property}`] === filterArray[`${property}`]) {
+          return true;
+        }
+      }
+      return false;
     };
 
-    if (e.target.dataset.key === "Darmowe") {
-      filters.free = false ? (filters.free = false) : (filters.free = true);
-      console.log(filters.free);
-    } else if (e.target.dataset.key === "Płatne") {
-      filters.price = false ? (filters.price = false) : (filters.price = true);
-    } else if (e.target.dataset.key === "UX") {
-      filters.UX = false ? (filters.UX = false) : (filters.UX = true);
-    } else if (e.target.dataset.key === "UI") {
-      filters.UI = false ? (filters.UI = false) : (filters.UI = true);
+    FilteredList = eventList.filter(filterItem);
+
+    checkWhatToDisplay(FilteredList);
+  };
+
+  const checkWhatToDisplay = (FilteredList) => {
+    if (Object.values(filterArray).indexOf(true) > -1) {
+      renderElement(FilteredList);
+    } else {
+      renderElement(eventList);
     }
-    console.log(filters);
-    console.log(e.target.dataset.key);
-
-    FilteredList = eventList.filter(
-      (item) =>
-        item.free === filters.free ||
-        item.UX === filters.UX ||
-        item.UI === filters.UI
-    );
-
-    // FilteredList = eventList.filter((item) => item.tags.includes(filters.tags));
-    renderElement(FilteredList);
-    // selectedTag.includes(e.target.dataset.key)
-    //   ? (selectedTag = "")
-    //   : (selectedTag += `&& ${e.target.dataset.key}`);
-    // console.log(selectedTag);
-    // selectedTag = "";
-    // let eList = eventList.filter((item) => item.tags.includes(selectedTag));
-    // console.log(eList);
-    // return eList;
   };
 
   const renderElement = (arrayList) => {
