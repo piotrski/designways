@@ -12,12 +12,11 @@ const eventList = [
     "Zakończenie wydarzenia": "4.2.2021 13:30",
     duration: "0:04",
     level: "Junior",
-    productDesign: true,
     tags: ["UX", "Product Design"],
     language: "polski",
     certification: "Tak",
-    Darmowe: false,
     Status: "Czeka na dodanie",
+    Platne: true,
     price: 613.8,
   },
   {
@@ -56,7 +55,7 @@ const eventList = [
     productDesign: true,
     UI: true,
     tags: ["UX", "Product Design", "UI"],
-    Darmowe: false,
+    Platne: true,
     certification: true,
     price: "613,8zł",
   },
@@ -64,6 +63,7 @@ const eventList = [
 window.addEventListener("DOMContentLoaded", (event) => {
   let filterClick = [...document.querySelectorAll(".tagsFilter")];
   let filterArray = {};
+  console.log(filterArray);
   for (const key of filterClick) {
     filterArray[key.dataset.key] = null;
   }
