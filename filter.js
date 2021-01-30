@@ -12,13 +12,21 @@
       date: "4.2.2021 09:30",
       "Zakończenie wydarzenia": "4.2.2021 13:30",
       duration: "0:04",
-      level: "Junior",
       Poczatkujacy: true,
-      tags: ["UX", "Product Design"],
+      tag: ["UX", "Product Design"],
       language: "polski",
       certification: "Tak",
       Status: "Czeka na dodanie",
-      Platne: true,
+      tags: {
+        UX: true,
+        productDesign: true,
+      },
+      level: {
+        Poczatkujacy: true,
+      },
+      price: {
+        Platne: true,
+      },
       price: 613.8,
     },
     {
@@ -33,12 +41,17 @@
       date: "8.02.2021",
       duration: "32h",
       spots: "15",
-      level: "Początkujący",
-      Poczatkujacy: true,
-      tags: ["UX"],
-      UX: true,
-      Darmowe: true,
+      tag: ["UX"],
       certification: true,
+      tags: {
+        UX: true,
+      },
+      level: {
+        Poczatkujacy: true,
+      },
+      price: {
+        Darmowe: true,
+      },
       price: "Darmowe",
     },
     {
@@ -53,13 +66,18 @@
       date: "8.02.2021",
       duration: "32h",
       spots: "15",
-      level: "Początkujący",
-      Poczatkujacy: true,
-      UX: true,
-      productDesign: true,
-      UI: true,
-      tags: ["UX", "Product Design", "UI"],
-      Platne: true,
+      tags: {
+        UX: true,
+        productDesign: true,
+        UI: true,
+      },
+      level: {
+        Poczatkujacy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "Product Design", "UI"],
       certification: true,
       price: "613,8zł",
     },
@@ -67,10 +85,16 @@
 
   window.addEventListener("DOMContentLoaded", (event) => {
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
-    let filterArray = {};
-    console.log(filterArray);
+    let filterArray = {
+      tags: {},
+      level: {},
+      price: {},
+    };
+    // console.log(filterArray);
     for (const key of filterClick) {
-      filterArray[key.dataset.key] = null;
+      filterArray.tags[key.dataset.key] = null;
+      filterArray.level[key.dataset.level] = null;
+      filterArray.price[key.dataset.price] = null;
     }
 
     const filterElement = (e) => {
@@ -78,25 +102,71 @@
         ? e.target.classList.remove("tag__single--active")
         : e.target.classList.add("tag__single--active");
 
-      const clickedElement = e.target.dataset.key.toString();
+      if (e.target.dataset.key) {
+        const clickedTag = e.target.dataset.key.toString();
+        filterArray.tags[`${clickedTag}`] == null
+          ? (filterArray.tags[`${clickedTag}`] = true)
+          : (filterArray.tags[`${clickedTag}`] = null);
+      } else if (e.target.dataset.level) {
+        const clickedLevel = e.target.dataset.level.toString();
+        filterArray.level[`${clickedLevel}`] == null
+          ? (filterArray.level[`${clickedLevel}`] = true)
+          : (filterArray.level[`${clickedLevel}`] = null);
+      } else if (e.target.dataset.price) {
+        const clickedPrice = e.target.dataset.price.toString();
+        filterArray.level[`${clickedPrice}`] == null
+          ? (filterArray.level[`${clickedPrice}`] = true)
+          : (filterArray.level[`${clickedPrice}`] = null);
+      }
+
       let FilteredList;
 
-      filterArray[`${clickedElement}`] == null
-        ? (filterArray[`${clickedElement}`] = true)
-        : (filterArray[`${clickedElement}`] = null);
-
-      console.log(filterArray);
+      // console.log(filterArray);
 
       const filterItem = (item) => {
-        for (const property in filterArray) {
-          if (item[`${property}`] === filterArray[`${property}`]) {
-            return true;
+        let passFilter = false;
+        let passLevel = false;
+        for (const property in filterArray.tags) {
+          if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
+            passFilter = true;
+            // console.log(item.tags);
+            // console.log(filterArray.tags);
+            // console.log(item.tags[`${property}`]);
+            // console.log(filterArray.tags[`${property}`]);
           }
         }
-        return false;
+        for (const property in filterArray.level) {
+          if (item.level[`${property}`] === filterArray.level[`${property}`]) {
+            passLevel = true;
+            console.log(item.level);
+            console.log(filterArray.level);
+            console.log(
+              item.level[`${property}`] === filterArray.level[`${property}`]
+            );
+            // console.log(item.level[`${property}`]);
+            // console.log(filterArray.level[`${property}`]);
+          }
+        }
+        return passLevel && passFilter;
       };
+      // const filterTags = (item) => {
 
+      // for (const property in filterArray.tags) {
+      //   console.log(filterArray.tags);
+      //   if (item[`${property}`] === filterArray.tags[`${property}`]) {
+      //     return true;
+      //   }
+      // }
+      // return false;
+      // };
+
+      // const filterLevel = (item) => {
+      //   item.Poczatkujacy == filterArray.Poczatkujacy ? true : false;
+      // };
       FilteredList = eventList.filter(filterItem);
+      console.log(FilteredList);
+      // FilteredList = FilteredList.filter();
+      // FilteredList = FilteredList.filter(filterLevel);
 
       checkWhatToDisplay(FilteredList);
     };
@@ -113,7 +183,7 @@
       let contenerList = ``;
       arrayList.map((workshop) => {
         let tags = "";
-        workshop.tags.map((tag) => {
+        workshop.tag.map((tag) => {
           tags += `<div class="tag__single tag__single--small">${tag}</div>`;
         });
         const currentHtml = `
