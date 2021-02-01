@@ -16,6 +16,8 @@
       tag: ["UX", "Product Design"],
       language: "polski",
       certification: "Tak",
+      skill: "Początkujacy",
+
       Status: "Czeka na dodanie",
       tags: {
         UX: true,
@@ -42,6 +44,8 @@
       duration: "32h",
       spots: "15",
       tag: ["UX"],
+      skill: "Początkujacy",
+
       certification: true,
       tags: {
         UX: true,
@@ -66,6 +70,7 @@
       date: "8.02.2021",
       duration: "32h",
       spots: "15",
+      skill: "Początkujacy",
       tags: {
         UX: true,
         productDesign: true,
@@ -115,6 +120,22 @@
           item.tags[`${property}`] === filterArray.tags[`${property}`]
         );
         if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
+          return true;
+        }
+      }
+      for (const property in filterArray.level) {
+        console.log(
+          item.level[`${property}`] === filterArray.level[`${property}`]
+        );
+        if (item.level[`${property}`] === filterArray.level[`${property}`]) {
+          return true;
+        }
+      }
+      for (const property in filterArray.price) {
+        console.log(
+          item.price[`${property}`] === filterArray.price[`${property}`]
+        );
+        if (item.price[`${property}`] === filterArray.price[`${property}`]) {
           return true;
         }
       }
@@ -231,7 +252,7 @@
            <div class="lecture__tags"> ${tags}
            </div>
 
-           <div class="level level__basic">${workshop.level}</div>
+           <div class="level level__basic">${workshop.skill}</div>
            <div class="lecture__title">
            ${workshop.title}
            </div>
@@ -260,7 +281,7 @@
          <div>
            <span class="lecture__rightGrid--span">Liczba Miejsc</span>${workshop.spots}
          </div>
-         <div class="lecture__rightGrid__price">${workshop.price}</div>
+         <div class="lecture__rightGrid__price">${workshop.cost}</div>
        </div>
      </div>`;
         tags = "";
