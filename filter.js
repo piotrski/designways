@@ -146,6 +146,7 @@
           }
         }
       }
+
       if (returnElement.price === null) {
         returnElement.price = true;
       }
@@ -156,91 +157,6 @@
         returnElement.level = true;
       }
       return returnElement.level && returnElement.price && returnElement.tags;
-
-      // for (const property in filterArray.tags) {
-      //   if (
-      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
-      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
-      //     item.price[`${property}`] === filterArray.price[`${property}`]
-      //   ) {
-      //     return true;
-      //   }
-      // }
-      // for (const property in filterArray.level) {
-      //   if (
-      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
-      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
-      //     item.price[`${property}`] === filterArray.price[`${property}`]
-      //   ) {
-      //     return true;
-      //   }
-      // }
-      // for (const property in filterArray.price) {
-      //   if (
-      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
-      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
-      //     item.price[`${property}`] === filterArray.price[`${property}`]
-      //   ) {
-      //     return true;
-      //   }
-      // }
-
-      return false;
-
-      // for (const property in filterArray.tags) {
-      //   if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
-      //     returnElement.tags = true;
-      //   } else {
-      //   }
-      // }
-      // for (const property in filterArray.level) {
-      //   if (item.level[`${property}`] === filterArray.level[`${property}`]) {
-      //     returnElement.level === null
-      //       ? (returnElement.level = true)
-      //       : (returnElement.level = null);
-      //   }
-      // }
-
-      // if (returnElement.tags === null) {
-      //   if (returnElement.level === null) {
-      //     if (returnElement.price === null) {
-      //       return;
-      //     } else {
-      //       return returnElement.price;
-      //     }
-      //   } else {
-      //     if (returnElement.price === null) {
-      //       return returnElement.level;
-      //     } else {
-      //       returnElement.level && returnElement.price;
-      //     }
-      //   }
-      // } else {
-      //   if (returnElement.level === null) {
-      //     if (returnElement.price === null) {
-      //       // console.log("sam tag");
-      //       // console.log(returnElement);
-
-      //       return returnElement.tags;
-      //     } else {
-      //       console.log("tag i cena");
-
-      //       return returnElement.tags && returnElement.price;
-      //     }
-      //   } else {
-      //     if (returnElement.price === null) {
-      //       console.log("tag i level");
-      //       console.log(returnElement);
-
-      //       return returnElement.tags && returnElement.level;
-      //     } else {
-      //       console.log("tag level cena");
-      //       return (
-      //         returnElement.tags && returnElement.level && returnElement.price
-      //       );
-      //     }
-      //   }
-      // }
     };
 
     const filterElement = (e) => {
@@ -266,7 +182,6 @@
       let FilteredList;
 
       FilteredList = eventList.filter(filterItem);
-      // console.log(FilteredList);
       checkWhatToDisplay(FilteredList);
     };
 
