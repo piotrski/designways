@@ -86,7 +86,7 @@
       tag: ["UX", "UI", "Service Design", "Product Design", "Badania"],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: "Darmowe",
     },
     {
       title:
@@ -124,7 +124,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: "Darmowe",
     },
     {
       title: "Mierniki UX",
@@ -218,7 +218,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: "Darmowe",
     },
     {
       title: "Analityka w UX dla zaawansowanych",
@@ -359,7 +359,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Darmowe: true,
+        Platne: true,
       },
       tag: [
         "UX",
