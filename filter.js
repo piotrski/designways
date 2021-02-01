@@ -573,9 +573,13 @@
         if (filterArray.tags[`${property}`] !== null) {
           if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
             returnElement.tags = true;
-            console.log(returnElement);
-          } else {
+          } else if (
+            returnElement.tags == null ||
+            returnElement.tags == false
+          ) {
             returnElement.tags = false;
+          } else if (returnElement.tags == true) {
+            returnElement.tags == true;
           }
         }
       }
@@ -584,9 +588,13 @@
         if (filterArray.level[`${property}`] !== null) {
           if (item.level[`${property}`] === filterArray.level[`${property}`]) {
             returnElement.level = true;
-            console.log(returnElement);
-          } else {
+          } else if (
+            returnElement.level == null ||
+            returnElement.level == false
+          ) {
             returnElement.level = false;
+          } else if (returnElement.level == true) {
+            returnElement.level == true;
           }
         }
       }
@@ -595,12 +603,17 @@
         if (filterArray.price[`${property}`] !== null) {
           if (item.price[`${property}`] === filterArray.price[`${property}`]) {
             returnElement.price = true;
-            console.log(returnElement);
-          } else {
+          } else if (
+            returnElement.price == null ||
+            returnElement.price == false
+          ) {
             returnElement.price = false;
+          } else if (returnElement.price == true) {
+            returnElement.price == true;
           }
         }
       }
+      // console.log(returnElement);
 
       if (returnElement.price === null) {
         returnElement.price = true;
@@ -616,7 +629,6 @@
 
     const filterElement = (e) => {
       toggleClass(e);
-      console.log("robie sie pierwszy");
       if (e.target.dataset.key) {
         const clickedTag = e.target.dataset.key.toString();
         filterArray.tags[`${clickedTag}`] == null
@@ -637,6 +649,7 @@
       let FilteredList;
 
       FilteredList = eventList.filter(filterItem);
+
       checkWhatToDisplay(FilteredList);
     };
 
