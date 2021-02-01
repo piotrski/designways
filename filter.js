@@ -27,7 +27,7 @@
       price: {
         Platne: true,
       },
-      price: 613.8,
+      cost: 613.8,
     },
     {
       title: "Ekonomia behawioralna w UX",
@@ -52,7 +52,7 @@
       price: {
         Darmowe: true,
       },
-      price: "Darmowe",
+      cost: "Darmowe",
     },
     {
       title: "Ekonomia behawioralna w UX platne",
@@ -79,7 +79,7 @@
       },
       tag: ["UX", "Product Design", "UI"],
       certification: true,
-      price: "613,8zł",
+      cost: "613,8zł",
     },
   ];
 
@@ -90,17 +90,94 @@
       level: {},
       price: {},
     };
-    // console.log(filterArray);
+    let returnElement = {
+      tags: null,
+      level: null,
+      price: null,
+    };
+
     for (const key of filterClick) {
       filterArray.tags[key.dataset.key] = null;
       filterArray.level[key.dataset.level] = null;
       filterArray.price[key.dataset.price] = null;
     }
 
-    const filterElement = (e) => {
+    const toggleClass = (e) => {
       e.target.classList.value.includes("tag__single--active")
         ? e.target.classList.remove("tag__single--active")
         : e.target.classList.add("tag__single--active");
+    };
+
+    const filterItem = (item) => {
+      console.log(item);
+      for (const property in filterArray.tags) {
+        console.log(
+          item.tags[`${property}`] === filterArray.tags[`${property}`]
+        );
+        if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
+          return true;
+        }
+      }
+      return false;
+
+      // for (const property in filterArray.tags) {
+      //   if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
+      //     returnElement.tags = true;
+      //   } else {
+      //   }
+      // }
+      // for (const property in filterArray.level) {
+      //   if (item.level[`${property}`] === filterArray.level[`${property}`]) {
+      //     returnElement.level === null
+      //       ? (returnElement.level = true)
+      //       : (returnElement.level = null);
+      //   }
+      // }
+
+      // if (returnElement.tags === null) {
+      //   if (returnElement.level === null) {
+      //     if (returnElement.price === null) {
+      //       return;
+      //     } else {
+      //       return returnElement.price;
+      //     }
+      //   } else {
+      //     if (returnElement.price === null) {
+      //       return returnElement.level;
+      //     } else {
+      //       returnElement.level && returnElement.price;
+      //     }
+      //   }
+      // } else {
+      //   if (returnElement.level === null) {
+      //     if (returnElement.price === null) {
+      //       // console.log("sam tag");
+      //       // console.log(returnElement);
+
+      //       return returnElement.tags;
+      //     } else {
+      //       console.log("tag i cena");
+
+      //       return returnElement.tags && returnElement.price;
+      //     }
+      //   } else {
+      //     if (returnElement.price === null) {
+      //       console.log("tag i level");
+      //       console.log(returnElement);
+
+      //       return returnElement.tags && returnElement.level;
+      //     } else {
+      //       console.log("tag level cena");
+      //       return (
+      //         returnElement.tags && returnElement.level && returnElement.price
+      //       );
+      //     }
+      //   }
+      // }
+    };
+
+    const filterElement = (e) => {
+      toggleClass(e);
 
       if (e.target.dataset.key) {
         const clickedTag = e.target.dataset.key.toString();
@@ -114,65 +191,25 @@
           : (filterArray.level[`${clickedLevel}`] = null);
       } else if (e.target.dataset.price) {
         const clickedPrice = e.target.dataset.price.toString();
-        filterArray.level[`${clickedPrice}`] == null
-          ? (filterArray.level[`${clickedPrice}`] = true)
-          : (filterArray.level[`${clickedPrice}`] = null);
+        filterArray.price[`${clickedPrice}`] == null
+          ? (filterArray.price[`${clickedPrice}`] = true)
+          : (filterArray.price[`${clickedPrice}`] = null);
       }
+      console.log(filterArray);
 
       let FilteredList;
 
-      // console.log(filterArray);
-
-      const filterItem = (item) => {
-        let passFilter = false;
-        let passLevel = false;
-        for (const property in filterArray.tags) {
-          if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
-            passFilter = true;
-            // console.log(item.tags);
-            // console.log(filterArray.tags);
-            // console.log(item.tags[`${property}`]);
-            // console.log(filterArray.tags[`${property}`]);
-          }
-        }
-        for (const property in filterArray.level) {
-          if (item.level[`${property}`] === filterArray.level[`${property}`]) {
-            passLevel = true;
-            console.log(item.level);
-            console.log(filterArray.level);
-            console.log(
-              item.level[`${property}`] === filterArray.level[`${property}`]
-            );
-            // console.log(item.level[`${property}`]);
-            // console.log(filterArray.level[`${property}`]);
-          }
-        }
-        return passLevel && passFilter;
-      };
-      // const filterTags = (item) => {
-
-      // for (const property in filterArray.tags) {
-      //   console.log(filterArray.tags);
-      //   if (item[`${property}`] === filterArray.tags[`${property}`]) {
-      //     return true;
-      //   }
-      // }
-      // return false;
-      // };
-
-      // const filterLevel = (item) => {
-      //   item.Poczatkujacy == filterArray.Poczatkujacy ? true : false;
-      // };
       FilteredList = eventList.filter(filterItem);
       console.log(FilteredList);
-      // FilteredList = FilteredList.filter();
-      // FilteredList = FilteredList.filter(filterLevel);
-
       checkWhatToDisplay(FilteredList);
     };
 
     const checkWhatToDisplay = (FilteredList) => {
-      if (Object.values(filterArray).indexOf(true) > -1) {
+      if (
+        Object.values(filterArray.tags).indexOf(true) > -1 ||
+        Object.values(filterArray.level).indexOf(true) > -1 ||
+        Object.values(filterArray.price).indexOf(true) > -1
+      ) {
         renderElement(FilteredList);
       } else {
         renderElement(eventList);
