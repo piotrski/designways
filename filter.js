@@ -95,11 +95,6 @@
       level: {},
       price: {},
     };
-    let returnElement = {
-      tags: null,
-      level: null,
-      price: null,
-    };
 
     for (const key of filterClick) {
       filterArray.tags[key.dataset.key] = null;
@@ -114,31 +109,82 @@
     };
 
     const filterItem = (item) => {
-      console.log(item);
+      let returnElement = {
+        tags: null,
+        level: null,
+        price: null,
+      };
+
       for (const property in filterArray.tags) {
-        console.log(
-          item.tags[`${property}`] === filterArray.tags[`${property}`]
-        );
-        if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
-          return true;
+        if (filterArray.tags[`${property}`] !== null) {
+          if (item.tags[`${property}`] === filterArray.tags[`${property}`]) {
+            returnElement.tags = true;
+            console.log(returnElement);
+          } else {
+            returnElement.tags = false;
+          }
         }
       }
+
       for (const property in filterArray.level) {
-        console.log(
-          item.level[`${property}`] === filterArray.level[`${property}`]
-        );
-        if (item.level[`${property}`] === filterArray.level[`${property}`]) {
-          return true;
+        if (filterArray.level[`${property}`] !== null) {
+          if (item.level[`${property}`] === filterArray.level[`${property}`]) {
+            returnElement.level = true;
+            console.log(returnElement);
+          } else {
+            returnElement.level = false;
+          }
         }
       }
       for (const property in filterArray.price) {
-        console.log(
-          item.price[`${property}`] === filterArray.price[`${property}`]
-        );
-        if (item.price[`${property}`] === filterArray.price[`${property}`]) {
-          return true;
+        if (filterArray.price[`${property}`] !== null) {
+          if (item.price[`${property}`] === filterArray.price[`${property}`]) {
+            returnElement.price = true;
+            console.log(returnElement);
+          } else {
+            returnElement.price = false;
+          }
         }
       }
+      if (returnElement.price === null) {
+        returnElement.price = true;
+      }
+      if (returnElement.tags === null) {
+        returnElement.tags = true;
+      }
+      if (returnElement.level === null) {
+        returnElement.level = true;
+      }
+      return returnElement.level && returnElement.price && returnElement.tags;
+
+      // for (const property in filterArray.tags) {
+      //   if (
+      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
+      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
+      //     item.price[`${property}`] === filterArray.price[`${property}`]
+      //   ) {
+      //     return true;
+      //   }
+      // }
+      // for (const property in filterArray.level) {
+      //   if (
+      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
+      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
+      //     item.price[`${property}`] === filterArray.price[`${property}`]
+      //   ) {
+      //     return true;
+      //   }
+      // }
+      // for (const property in filterArray.price) {
+      //   if (
+      //     item.tags[`${property}`] === filterArray.tags[`${property}`] &&
+      //     item.level[`${property}`] === filterArray.level[`${property}`] &&
+      //     item.price[`${property}`] === filterArray.price[`${property}`]
+      //   ) {
+      //     return true;
+      //   }
+      // }
+
       return false;
 
       // for (const property in filterArray.tags) {
@@ -199,7 +245,7 @@
 
     const filterElement = (e) => {
       toggleClass(e);
-
+      console.log("robie sie pierwszy");
       if (e.target.dataset.key) {
         const clickedTag = e.target.dataset.key.toString();
         filterArray.tags[`${clickedTag}`] == null
@@ -216,12 +262,11 @@
           ? (filterArray.price[`${clickedPrice}`] = true)
           : (filterArray.price[`${clickedPrice}`] = null);
       }
-      console.log(filterArray);
 
       let FilteredList;
 
       FilteredList = eventList.filter(filterItem);
-      console.log(FilteredList);
+      // console.log(FilteredList);
       checkWhatToDisplay(FilteredList);
     };
 
