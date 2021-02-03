@@ -520,7 +520,7 @@ input {
 }
 
 .tag__single--small {
-  margin: 0 1rem 0 0;
+  margin: 0 1rem 1rem 0;
   font-size: 1.2rem;
   padding: 0.6rem 1.2rem;
 }
@@ -567,6 +567,8 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -574,14 +576,14 @@ input {
 }
 
 .lecture__description > * {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .lecture__title {
   font-family: Manrope;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 140%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -11,7 +11,7 @@
       spots: 12,
       date: "4.2.2021 09:30",
       "Zakończenie wydarzenia": "4.2.2021 13:30",
-      duration: "0:04",
+      duration: "4:00",
       skill: "Junior",
       tags: {
         UX: true,
@@ -39,7 +39,7 @@
       speaker: "Monika Banach",
       spots: 12,
       date: "5.2.2021 09:30",
-      duration: "0:04",
+      duration: "4:00",
       skill: "Junior",
       tags: {
         UX: true,
@@ -79,7 +79,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Darmowe: true,
+        Platne: true,
       },
       tag: [
         "UX",
@@ -90,7 +90,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: 3936,
     },
     {
       title:
@@ -118,7 +118,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Darmowe: true,
+        Platne: true,
       },
       tag: [
         "Badania / Research",
@@ -129,7 +129,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: 2460,
     },
     {
       title: "Mierniki UX",
@@ -212,7 +212,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Darmowe: true,
+        Platne: true,
       },
       tag: [
         "Badania / Research",
@@ -223,7 +223,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "",
+      cost: 3936,
     },
     {
       title: "Analityka w UX dla zaawansowanych",
@@ -298,7 +298,7 @@
       duration: "0:16",
       skill: "Regular",
       tags: {
-        productDesign: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -306,7 +306,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Product Design"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952,
@@ -322,7 +322,7 @@
       spots: 12,
       date: "2.3.2021 09:30",
       "Zakończenie wydarzenia": "2.3.2021 13:30",
-      duration: "0:04",
+      duration: "4:00",
       skill: "Junior",
       tags: {
         UX: true,
@@ -364,7 +364,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Darmowe: true,
+        Platne: true,
       },
       tag: [
         "UX",
@@ -448,7 +448,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        prooductDesign: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -456,7 +456,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Product Design"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952,
@@ -504,7 +504,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        Analityka: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -512,7 +512,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Analityka"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952,
@@ -560,7 +560,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        Analityka: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -568,7 +568,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Analityka"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952.0,
@@ -629,7 +629,7 @@
       tag: ["UX", "UI"],
       language: "polski",
       certification: "Tak",
-      price: 490.8,
+      cost: 490.8,
     },
     {
       title: "SAFe® 5.0 Scrum Master",
@@ -646,7 +646,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        productDesign: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -654,7 +654,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Product Design"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952.0,
@@ -670,7 +670,7 @@
       spots: 12,
       date: "18.3.2021 09:30",
       "Zakończenie wydarzenia": "18.3.2021 13:30",
-      duration: "0:04",
+      duration: "4:00",
       skill: "Junior",
       tags: {
         Analityka: true,
@@ -758,7 +758,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        Analityka: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -766,7 +766,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Analityka"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2583.0,
@@ -844,7 +844,7 @@
       duration: "16:00",
       skill: "Regular",
       tags: {
-        Analityka: true,
+        prooductManagement: true,
       },
       level: {
         Sredniozaawansowany: true,
@@ -852,7 +852,7 @@
       price: {
         Platne: true,
       },
-      tag: ["Analityka"],
+      tag: ["Product Management"],
       language: "polski",
       certification: "Tak",
       cost: 2952.0,
@@ -982,7 +982,7 @@
       level: {},
       price: {},
     };
-    console.log(eventList.length);
+
     for (const key of filterClick) {
       filterArray.tags[key.dataset.key] = null;
       filterArray.level[key.dataset.level] = null;
@@ -1097,7 +1097,18 @@
         renderElement(eventList);
       }
     };
-
+    const generatePrice = (e) => {
+      let price = e.cost;
+      console.log(typeof price);
+      if (Number.isFinite(price)) {
+        price = e.cost.toFixed(2).replace(/\./g, ",");
+        price += " zł";
+        console.log(price);
+        return price;
+      } else {
+        return price;
+      }
+    };
     const renderElement = (arrayList) => {
       let contenerList = ``;
       arrayList.map((workshop) => {
@@ -1105,6 +1116,9 @@
         workshop.tag.map((tag) => {
           tags += `<div class="tag__single tag__single--small">${tag}</div>`;
         });
+
+        let priceComma = generatePrice(workshop);
+        // .toFixed(2).replace(/./g, ",")
         const currentHtml = `
       <div class="lecture">
        <div class="lecture__half">
@@ -1118,9 +1132,7 @@
            ${workshop.title}
            </div>
            <a href="${workshop.url}" class="lecture__join">Weź udział</a>
-           <a href="#" class="lecture__join lecture__join--testimonial"
-             >Opinie</a
-           >
+          
          </div>
        </div>
        <div class="lecture__half lecture__rightGrid">
@@ -1142,7 +1154,7 @@
          <div>
            <span class="lecture__rightGrid--span">Liczba Miejsc</span>${workshop.spots}
          </div>
-         <div class="lecture__rightGrid__price">${workshop.cost}</div>
+         <div class="lecture__rightGrid__price">${priceComma}</div>
        </div>
      </div>`;
         tags = "";
