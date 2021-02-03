@@ -39,7 +39,6 @@
       speaker: "Monika Banach",
       spots: 12,
       date: "5.2.2021 09:30",
-      "Zakończenie wydarzenia": "5.2.2021 09:30",
       duration: "0:04",
       skill: "Junior",
       tags: {
@@ -52,7 +51,7 @@
       price: {
         Platne: true,
       },
-      tag: ["UX", "Badania"],
+      tag: ["UX", "Badania / Research"],
       language: "polski",
       certification: "Tak",
       cost: 552.3,
@@ -67,7 +66,6 @@
       speaker: "Sara Kapela",
       spots: 15,
       date: "8.2.2021 09:00",
-      "Zakończenie wydarzenia": "12.2.2021 15:00",
       duration: "32:00",
       skill: "Regular",
       tags: {
@@ -83,10 +81,16 @@
       price: {
         Darmowe: true,
       },
-      tag: ["UX", "UI", "Service Design", "Product Design", "Badania"],
+      tag: [
+        "UX",
+        "UI",
+        "Service Design",
+        "Product Design",
+        "Badania / Research",
+      ],
       language: "polski",
       certification: "Tak",
-      cost: "Darmowe",
+      cost: "",
     },
     {
       title:
@@ -100,6 +104,7 @@
       speaker: "Katarzyna Talaga-Korcz",
       spots: 15,
       date: "11.2.2021 12:00",
+      "Zakończenie wydarzenia": "19.2.2021 16:00",
       duration: "16:00",
       skill: "Regular",
       tags: {
@@ -124,7 +129,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "Darmowe",
+      cost: "",
     },
     {
       title: "Mierniki UX",
@@ -218,7 +223,7 @@
       ],
       language: "polski",
       certification: "Tak",
-      cost: "Darmowe",
+      cost: "",
     },
     {
       title: "Analityka w UX dla zaawansowanych",
@@ -359,7 +364,7 @@
         Sredniozaawansowany: true,
       },
       price: {
-        Platne: true,
+        Darmowe: true,
       },
       tag: [
         "UX",
@@ -383,7 +388,6 @@
       speaker: "Piotr Kozłowski",
       spots: 12,
       date: "4.3.2021 09:30",
-      "Zakończenie wydarzenia": "4.3.2021 13:30",
       duration: "4:00",
       skill: "Senior",
       tags: {
@@ -523,6 +527,7 @@
       speaker: "Piotr Kozłowski",
       spots: 12,
       date: "11.3.2021 09:30",
+      "Zakończenie wydarzenia": "11.3.2021 13:30",
       duration: "4:00",
       skill: "Senior",
       tags: {
@@ -540,6 +545,434 @@
       certification: "Tak",
       cost: 490.8,
     },
+    {
+      title: "SAFe® 5.0 For Teams",
+      url:
+        "https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-for-teams/",
+      img:
+        "https://dl.airtable.com/.attachments/76323d4caaba53a52a9af6c3a30cffac/d0294c40/ZZ_LOGO_PACK_RGB_mcverwhitebcg.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Michał Papież",
+      spots: 20,
+      date: "13.3.2021 09:00",
+      "Zakończenie wydarzenia": "14.3.2021 17:00",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        Analityka: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Analityka"],
+      language: "polski",
+      certification: "Tak",
+      cost: 2952.0,
+    },
+    {
+      title: "Prowadzenie warsztatów UX",
+      url: "https://uxupgrade.pl/szkolenie/prowadzenie-warsztatow-ux",
+      img:
+        "https://dl.airtable.com/.attachments/6eb9837e95d235568f5ff34957685e45/129ed566/warsztaty.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Wojciech Chojnacki",
+      spots: 12,
+      date: "16.3.2021 09:00",
+      "Zakończenie wydarzenia": "19.3.2021 13:00",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        UX: true,
+        productDesign: true,
+        serviceDesign: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "Product Design", "Service Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 1966.8,
+    },
+    {
+      title: "Architektura informacji w e-commerce",
+      url:
+        "https://uxupgrade.pl/szkolenie/architektura-informacji-w-e-commerce",
+      img:
+        "https://dl.airtable.com/.attachments/7482441c807ca69ca9764d6286498030/f8d5ce85/Architekturainformacji.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Witold Janiszewski",
+      spots: 12,
+      date: "17.3.2021 09:30",
+      "Zakończenie wydarzenia": "17.3.2021 13:30",
+      duration: "4:00",
+      skill: "Regular",
+      tags: {
+        UX: true,
+        UI: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "UI"],
+      language: "polski",
+      certification: "Tak",
+      price: 490.8,
+    },
+    {
+      title: "SAFe® 5.0 Scrum Master",
+      url:
+        "https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-scrum-master/",
+      img:
+        "https://dl.airtable.com/.attachments/aca27d1d99ad97b92adac0891724c1ef/042c2134/FB_safe_szkolenie1200x1200_ScrumMaster.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Michał Papież",
+      spots: 20,
+      date: "18.3.2021 09:00",
+      "Zakończenie wydarzenia": "19.3.2021 17:00",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        productDesign: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Product Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 2952.0,
+    },
+    {
+      title: "Analityka w UX",
+      url: "https://uxupgrade.pl/szkolenie/analityka-w-ux",
+      img:
+        "https://dl.airtable.com/.attachments/9f8bc3db9c4432065623ab820ad3861d/b738a3e1/Analitykaux.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Radosław Pawlak",
+      spots: 12,
+      date: "18.3.2021 09:30",
+      "Zakończenie wydarzenia": "18.3.2021 13:30",
+      duration: "0:04",
+      skill: "Junior",
+      tags: {
+        Analityka: true,
+        UX: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Analityka", "UX"],
+      language: "polski",
+      certification: "Tak",
+      cost: 736.8,
+    },
+    {
+      title: "Dostepność w pigułce",
+      url: "https://uxupgrade.pl/szkolenie/dostepnosc-w-pigulce",
+      img:
+        "https://dl.airtable.com/.attachments/bca5e3656bff864948a78f5352a3c20d/3106c4c3/dostepnosc.jpg",
+      type: "Skolenie / warsztat",
+      location: "Online",
+      speaker: "Piotr Źrołka",
+      spots: 12,
+      date: "23.3.2021 09:30",
+      "Zakończenie wydarzenia": "23.2.2021 16:30",
+      duration: "7:00",
+      skill: "Regular",
+      tags: {
+        productDesign: true,
+        UX: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "Product Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 1228.8,
+    },
+    {
+      title: "Podstawy projektowania w Figmie",
+      url: "https://uxupgrade.pl/szkolenie/podstawy-projektowania-w-figmie",
+      img:
+        "https://dl.airtable.com/.attachments/c90b5e1af539a7c8f278a7aea461539f/bd7f10a3/figma.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Witold Janiszewski, Łukasz Rybkowski",
+      spots: 12,
+      date: "25.3.2021 09:30",
+      "Zakończenie wydarzenia": "25.3.2021 16:30",
+      duration: "7:00",
+      skill: "Junior",
+      tags: {
+        UI: true,
+        UX: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "UI"],
+      language: "polski",
+      certification: "Tak",
+      cost: 982.8,
+    },
+    {
+      title: "Leading SAFe® 5.0",
+      url:
+        "https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/leading-safe-szkolenie-online/",
+      img:
+        "https://dl.airtable.com/.attachments/2eae5002c837fde742d8607914c1cb58/4420062b/ZZ_FB_LEANDINGSAFESZKOLENIE_FB_1200x628.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Michał Papież",
+      spots: 20,
+      date: "27.3.2021 09:00",
+      "Zakończenie wydarzenia": "28.3.2021 17:00",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        Analityka: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Analityka"],
+      language: "polski",
+      certification: "Tak",
+      cost: 2583.0,
+    },
+    {
+      title: "UX chatbotów",
+      url: "https://uxupgrade.pl/szkolenie/ux-chatbotow",
+      img:
+        "https://dl.airtable.com/.attachments/d0753feee2552a541c3af8208dabe738/9739c38c/Chat-bot.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Anna Schneider",
+      spots: 12,
+      date: "30.3.2021 09:30",
+      "Zakończenie wydarzenia": "30.3.2021 14:30",
+      duration: "4:30",
+      skill: "Junior",
+      tags: {
+        productDesign: true,
+        UX: true,
+        UI: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Product Design", "UX", "UI"],
+      language: "polski",
+      certification: "Tak",
+      cost: 736.8,
+    },
+    {
+      title: "Value Proposition Design",
+      url: "https://uxupgrade.pl/szkolenie/value-proposition-design",
+      img:
+        "https://dl.airtable.com/.attachments/87a15170f6053ac2cd3d49b2573628c1/0a73512d/ValueProposition.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Wojciech Chojnacki",
+      spots: 12,
+      date: "8.4.2021 09:30",
+      "Zakończenie wydarzenia": "8.4.2021 13:30",
+      duration: "4:00",
+      skill: "Junior",
+      tags: {
+        productDesign: true,
+        UX: true,
+        serviceDesign: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "Product Design", "Service Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 736.8,
+    },
+    {
+      title: "SAFe® 5.0 For Teams",
+      url:
+        "https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-for-teams/",
+      img:
+        "https://dl.airtable.com/.attachments/b9a42ff43fce3a2ed67b21ac0b9f818d/b3a3b85f/ZZ_LOGO_PACK_RGB_mcverwhitebcg.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Michał Papież",
+      spots: 20,
+      date: "9.4.2021 09:00",
+      "Zakończenie wydarzenia": "9.4.2021 17:00",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        Analityka: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Analityka"],
+      language: "polski",
+      certification: "Tak",
+      cost: 2952.0,
+    },
+    {
+      title: "Podstawy projektowania w Axure RP",
+      url: "https://uxupgrade.pl/szkolenie/podstawy-projektowania-w-axure-rp",
+      img:
+        "https://dl.airtable.com/.attachments/0b60a9447538a5384328bcc374621c41/8ec5d333/AxurePodstawy.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Piotr Kozłowski",
+      spots: 12,
+      date: "9.4.2021 09:30",
+      "Zakończenie wydarzenia": "9.4.2021 13:30",
+      duration: "4:00",
+      skill: "Junior",
+      tags: {
+        UI: true,
+        UX: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UI", "UX"],
+      language: "polski",
+      certification: "Tak",
+      cost: 490.8,
+    },
+    {
+      title: "Wprowadzenie do Design Sprint",
+      url: "https://uxupgrade.pl/szkolenie/wprowadzenie-do-design-sprint",
+      img:
+        "https://dl.airtable.com/.attachments/6509646015c27df2b90cfa2900a1c195/a540c616/DesignSprint.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Piotr Kozłowski",
+      spots: 12,
+      date: "13.4.2021 09:30",
+      "Zakończenie wydarzenia": "13.4.2021 13:00",
+      duration: "4:00",
+      skill: "Junior",
+      tags: {
+        productDesign: true,
+        UX: true,
+      },
+      level: {
+        Podstawowy: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Product Design", "UX"],
+      language: "polski",
+      certification: "Tak",
+      cost: 490.8,
+    },
+    {
+      title: "ReQuest 2021 Online",
+      url: "https://www.facebook.com/events/819075058881820",
+      img:
+        "https://dl.airtable.com/.attachments/01c62dcf716bca889d43ec2a642b9116/5dbeac77/21688262_325043054625402_4798507555177035592_o.png",
+      type: "konferencja",
+      location: "Online",
+      speaker: "Wielu prowadzących",
+      spots: 200,
+      date: "15.4.2021 09:00",
+      "Zakończenie wydarzenia": "16.4.2021 17:30",
+      duration: "16:00",
+      skill: "Regular",
+      tags: {
+        UX: true,
+        UI: true,
+        serviceDesign: true,
+        productDesign: true,
+        Badania: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Darmowe: true,
+      },
+      tag: ["Product Design", "Service Design", "UX", "UI", "Analityka"],
+      language: "polski",
+      certification: "Tak",
+      cost: "Darmowe",
+    },
+    {
+      title: "Projektowanie prywatności w produktach cyfrowych",
+      url:
+        "https://uxupgrade.pl/szkolenie/projektowanie-prywatnosci-w-produktach-cyfrowych",
+      img:
+        "https://dl.airtable.com/.attachments/216baa0eb692e17176d3b40e26529b90/0a6500ec/Privacybydesign.jpg",
+      type: "Meetup",
+      location: "Online",
+      speaker: "Katarzyna Muszyńska, Mariola Więckowska",
+      spots: 12,
+      date: "13.5.2021 09:30",
+      "Zakończenie wydarzenia": "13.5.2021 14:30",
+      duration: "5:00",
+      skill: "Regular",
+      tags: {
+        UX: true,
+        productDesign: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["UX", "Product Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 490.8,
+    },
   ];
 
   window.addEventListener("DOMContentLoaded", (event) => {
@@ -549,7 +982,7 @@
       level: {},
       price: {},
     };
-
+    console.log(eventList.length);
     for (const key of filterClick) {
       filterArray.tags[key.dataset.key] = null;
       filterArray.level[key.dataset.level] = null;
