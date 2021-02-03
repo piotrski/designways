@@ -1228,7 +1228,7 @@
            <div class="lecture__title">
            ${workshop.title}
            </div>
-           <a href="${workshop.url}" class="lecture__join">Weź udział</a>
+           <a href="${workshop.url}" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
           
          </div>
        </div>
@@ -1253,6 +1253,9 @@
          </div>
          <div class="lecture__rightGrid__price">${priceComma}</div>
        </div>
+       <div class="lecture__half buttonMobile">
+          <a href="${workshop.url}" class="lecture__join buttonMobile__cta">Dowiedz się więcej</a>
+        </div>
      </div>`;
           tags = "";
           contenerList += currentHtml;

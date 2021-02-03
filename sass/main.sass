@@ -64,11 +64,32 @@ input
     margin: 0 auto
     @media (max-width: 768px )
         padding: 0px 25px
+    @media (max-width: 576px)
+        padding: 0 10px
     &--big
         max-width: 119rem
         width: 119rem
+        @media (max-width: 1200px)
+            max-width: 92%
+            width: 92%
+        @media (max-width: 768px)
+            max-width: 96%
+            width: 96%
+        @media (max-width: 576px)
+            max-width: 96%
+            width: 96%
+
     &--xl
         max-width: 128rem
+        @media (max-width: 1280px)
+            max-width: 92%
+            width: 92%
+        @media (max-width: 768px)
+            max-width: 96%
+            width: 96%
+        @media (max-width: 576px)
+            max-width: 96%
+            width: 96%
 
 .display
     &__column
@@ -87,6 +108,8 @@ input
         height: 4.2rem
         margin: 30px auto
         align-content: center
+        @media (max-width: 576px)
+            justify-content: center
     &__element
         font-family: Manrope
         font-style: normal
@@ -99,6 +122,8 @@ input
         align-items: center
         margin-left: 4rem
         color: #FFFFFF
+        @media (max-width: 576px)
+            display: none
 .violet
     background-color: #7D4CE5
     background-image: url('images/bg-trop.png')
@@ -128,7 +153,8 @@ input
         text-align: center
         color: #FFFFFF
         @media (max-width: 576px)
-            font-size: 36px
+            font-size: 26px
+            line-height: 125%
         &--smallBottom
             margin: 40px 0 20px 0
     &__h5
@@ -141,6 +167,9 @@ input
         align-items: center
         text-align: center
         color: #FFFFFF
+        @media (max-width: 576px)
+            font-size: 18px
+            line-height: 150%
     &__h6
         font-family: Manrope
         font-style: normal
