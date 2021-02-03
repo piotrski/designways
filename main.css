@@ -633,7 +633,6 @@ input {
 .lecture {
   width: 100%;
   min-height: 50px;
-  height: 80vh;
   max-height: 100vh;
   background: #FFFFFF;
   border: 1px solid #CED3E0;
@@ -668,6 +667,7 @@ input {
 
 @media (max-width: 576px) {
   .lecture {
+    height: 80vh;
     padding: 15px;
   }
 }
