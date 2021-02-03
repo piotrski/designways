@@ -295,7 +295,7 @@
       spots: 20,
       date: "25.2.2021 09:00",
       "Zakończenie wydarzenia": "26.2.2021 17:00",
-      duration: "0:16",
+      duration: "16:00",
       skill: "Regular",
       tags: {
         prooductManagement: true,
@@ -1099,15 +1099,20 @@
     };
     const generatePrice = (e) => {
       let price = e.cost;
-      console.log(typeof price);
       if (Number.isFinite(price)) {
         price = e.cost.toFixed(2).replace(/\./g, ",");
         price += " zł";
-        console.log(price);
         return price;
       } else {
         return price;
       }
+    };
+
+    const displayDuration = (e) => {
+      // console.log(e.duration.split(":"));
+      let arrayDuration = e.duration.split(":");
+      let arrayInput = `${arrayDuration[0]} h ${arrayDuration[1]} min `;
+      return arrayInput;
     };
     const renderElement = (arrayList) => {
       let contenerList = ``;
@@ -1118,7 +1123,7 @@
         });
 
         let priceComma = generatePrice(workshop);
-        // .toFixed(2).replace(/./g, ",")
+        let duration = displayDuration(workshop);
         const currentHtml = `
       <div class="lecture">
        <div class="lecture__half">
@@ -1143,7 +1148,7 @@
            <span class="lecture__rightGrid--span">Data</span>${workshop.date}
          </div>
          <div>
-           <span class="lecture__rightGrid--span">Czas Trwania</span>${workshop.duration}
+           <span class="lecture__rightGrid--span">Czas Trwania</span>${duration}
          </div>
          <div class="lecture__rightGrid__borderAndSpacing">
            <span class="lecture__rightGrid--span">Lokalizacja</span>${workshop.location}
