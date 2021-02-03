@@ -822,8 +822,6 @@ input {
 
 @media (max-width: 576px) {
   .lecture__rightGrid {
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
     margin: 1rem 0;
     font-size: 1.2rem;
   }
