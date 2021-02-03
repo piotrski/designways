@@ -973,6 +973,92 @@
       certification: "Tak",
       cost: 490.8,
     },
+    {
+      title: "Kreatywność dla liderów",
+      url: "www.facebook.com/events/1061434210996941",
+      img:
+        "https://dl.airtable.com/.attachments/de82168b09ebe471791c1695d82e345d/14e881f9/143096183_245729747076483_5649012950557478041_o.jpg",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Seweryn Rudnicki, Łukasz Maźnica",
+      spots: 12,
+      date: "11.2.2021 09:00",
+      "Zakończenie wydarzenia": "18.2.2021 13:00",
+      duration: "12:00",
+      skill: "Regular",
+      tags: {
+        Branding: true,
+        serviceDesign: true,
+        productDesign: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Branding", "Product Design", "Service Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 800.0,
+    },
+    {
+      title:
+        "Circular Design - poznaj i zrozum nowy kontekst projektowania przyjaznego środowisku",
+      url: "https://fb.me/e/1Uo4VtoRw",
+      img:
+        "https://dl.airtable.com/.attachments/d97c49a1b32ac39296ac72a4cbdbc623/df6a6749/JakpostawipierwszekrokizGOZCircularInspirations6.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Agata Miryn-Sienkiewicz",
+      spots: 8,
+      date: "18.3.2021 16:00",
+      "Zakończenie wydarzenia": "18.3.2021 18:30",
+      duration: "2:30",
+      skill: "Regular",
+      tags: {
+        productDesign: true,
+      },
+      level: {
+        Sredniozaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Product Design"],
+      language: "polski",
+      certification: "Tak",
+      cost: 349.0,
+    },
+    {
+      title: "Masterclass. Analiza jakościowa dla zaawansowanych",
+      url: "https://learn.cux.io/analiza-masterclass",
+      img:
+        "https://dl.airtable.com/.attachments/e12dbce50111de8b2cbe817fcc65d1de/b2494c56/Thefirstever8.png",
+      type: "Szkolenie / warsztat",
+      location: "Online",
+      speaker: "Paulina Walkowiak",
+      spots: 20,
+      date: "18.2.2021 9:00",
+      "Zakończenie wydarzenia": "18.2.2021 17:00",
+      duration: "8:00",
+      skill: "Senior",
+      tags: {
+        Analityka: true,
+        Badania: true,
+        UX: true,
+      },
+      level: {
+        Zaawansowany: true,
+      },
+      price: {
+        Platne: true,
+      },
+      tag: ["Analityka", "Badania / Research", "UX"],
+      language: "polski",
+      certification: "Tak",
+      cost: 999.0,
+    },
   ];
 
   window.addEventListener("DOMContentLoaded", (event) => {
@@ -1109,22 +1195,28 @@
     };
 
     const displayDuration = (e) => {
-      // console.log(e.duration.split(":"));
       let arrayDuration = e.duration.split(":");
       let arrayInput = `${arrayDuration[0]} h ${arrayDuration[1]} min `;
       return arrayInput;
     };
     const renderElement = (arrayList) => {
       let contenerList = ``;
-      arrayList.map((workshop) => {
-        let tags = "";
-        workshop.tag.map((tag) => {
-          tags += `<div class="tag__single tag__single--small">${tag}</div>`;
-        });
+      console.log(arrayList.length);
+      if (arrayList.length == 0) {
+        contenerList = `
+        <div class="lecture">
+          Ooppps. Wygląda na to, ze nie mamy nic z tym filtrowaniem. Wyślij nam zgłoszenie na <a href="mailto:hello@deisgnways.io">hello@designways.io</a>
+        </div>`;
+      } else {
+        arrayList.map((workshop) => {
+          let tags = "";
+          workshop.tag.map((tag) => {
+            tags += `<div class="tag__single tag__single--small">${tag}</div>`;
+          });
 
-        let priceComma = generatePrice(workshop);
-        let duration = displayDuration(workshop);
-        const currentHtml = `
+          let priceComma = generatePrice(workshop);
+          let duration = displayDuration(workshop);
+          const currentHtml = `
       <div class="lecture">
        <div class="lecture__half">
          <img class="lecture__image" src="${workshop.img}" alt="" />
@@ -1162,9 +1254,10 @@
          <div class="lecture__rightGrid__price">${priceComma}</div>
        </div>
      </div>`;
-        tags = "";
-        contenerList += currentHtml;
-      });
+          tags = "";
+          contenerList += currentHtml;
+        });
+      }
       let signle = document.getElementById("lecture");
       signle.innerHTML = contenerList;
     };
