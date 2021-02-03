@@ -640,9 +640,13 @@ input {
   border-radius: 12px;
   margin-bottom: 20px;
   padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -653,10 +657,10 @@ input {
 
 @media (max-width: 992px) {
   .lecture {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
   }
 }
 
@@ -667,7 +671,6 @@ input {
 }
 
 .lecture__half {
-  width: calc(50% - 1.25rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,6 +810,8 @@ input {
   height: 100%;
   display: -ms-grid;
   display: grid;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
   grid-auto-flow: column;
   -ms-grid-columns: 3fr 3fr 2fr;
       grid-template-columns: 3fr 3fr 2fr;
@@ -828,12 +833,12 @@ input {
 }
 
 .lecture__rightGrid > * {
-  padding: 1.5rem;
+  padding: 15px;
 }
 
 @media (max-width: 576px) {
   .lecture__rightGrid > * {
-    padding: 1rem;
+    padding: 1px;
   }
 }
 
