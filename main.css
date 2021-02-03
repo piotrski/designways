@@ -658,6 +658,7 @@ input {
 
 @media (max-width: 992px) {
   .lecture {
+    height: 80vh;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;
@@ -667,7 +668,6 @@ input {
 
 @media (max-width: 576px) {
   .lecture {
-    height: 80vh;
     padding: 15px;
   }
 }
