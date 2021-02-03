@@ -830,6 +830,7 @@ input {
 @media (max-width: 576px) {
   .lecture__rightGrid {
     margin: 1rem 0;
+    border: none;
     font-size: 1.2rem;
   }
 }
