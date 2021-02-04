@@ -9,14 +9,35 @@
     </style>
     <link rel="stylesheet" href="main.css" />
     <script src="filter.js"></script>
+    <!-- 1️⃣ Install Magic SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
+    <script>
+      // /* 2️⃣ Initialize Magic Instance */
+      // let magic = new Magic("pk_live_6A8CF7F906BC895E");
+
+      // /* 3️⃣ Implement Render Function */
+      // const render = async () => {
+      //   const isLoggedIn = await magic.user.isLoggedIn();
+      //   console.log(isLoggedIn);
+      //   if (!isLoggedIn) {
+      //     window.location.replace(`https://hub.designways.io/`);
+      //   }
+      // };
+      // const handleLogout = async () => {
+      //   await magic.user.logout();
+      //   render();
+      // };
+    </script>
   </head>
-  <body>
+  <body onload="render()">
     <header class="violet violet__filter display__column">
       <div class="container container--big display__row nav__main">
         <img src="images/Logo_horizontal_white.svg" alt="" />
         <nav class="nav__container display__flex disp">
           <ul class="nav__list display__row">
-            <li class="nav__element">Kontakt</li>
+            <li class="nav__element nav__logout" onclick="handleLogout()">
+              Zakończ sesję
+            </li>
             <li class="nav__element">
               <img src="/images/facebook.svg" alt="" />
             </li>

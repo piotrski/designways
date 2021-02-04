@@ -204,6 +204,10 @@ input {
   }
 }
 
+.nav__logout {
+  cursor: pointer;
+}
+
 .nav__element {
   font-family: Manrope;
   font-style: normal;
