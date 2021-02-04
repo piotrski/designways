@@ -1,4 +1,5 @@
 (() => {
+  // prawdopobobnie to i tak wyniesiesz do API więc warto nie trzymać danych tutaj tylko wywalić do JSON'a i załadować prostym fetch'em
   const eventList = [
     {
       title: "Ekonomia behawioralna w UX",
@@ -10,10 +11,17 @@
       speaker: "Piotr Kozłowski",
       spots: 12,
       date: "4.2.2021 09:30",
+      // coś tu chyba zostało 
       "Zakończenie wydarzenia": "4.2.2021 13:30",
       duration: "4:00",
       skill: "Junior",
+      // taka struktura skazuje Cię na przyszłe dramy
+      // jeśli wiesz, że tagi nie będą niosły dodatkowych informacji to warto zwykła tablica stringów (bedziesz mógł choćby polskie znaki 
+      // jeśli bardziej złożone to raczej w stronę 
+      // tags: [ { name: "UX"} ]
+      // bo pozwala Ci się rozbudowac i też wciąż możesz polskie znaki   
       tags: {
+        
         UX: true,
         productDesign: true,
       },
@@ -25,6 +33,8 @@
       },
       tag: ["UX", "Product Design"],
       language: "polski",
+      // nie ma co jezykowych danych tam trzymać jak chyba odpowiedź to tak/nie :P 
+      // wiec raczej true/false a w templatce tłumaczysz
       certification: "Tak",
       cost: 613.8,
     },
@@ -1062,6 +1072,8 @@
   ];
 
   window.addEventListener("DOMContentLoaded", (event) => {
+    // taka tablica jest niepotrzebna 
+    // zauważ że wtedy do każdego elementu dokładasz handler
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
     let filterArray = {
       tags: {},
@@ -1172,8 +1184,10 @@
       checkWhatToDisplay(FilteredList);
     };
 
+    // nazwy zmiennych zawsze z małych - z dużej sugeruje że to typ lub enum
     const checkWhatToDisplay = (FilteredList) => {
       if (
+        // własnie to co pisałem o formacie danych mocno Ci tu dokłada logiki
         Object.values(filterArray.tags).indexOf(true) > -1 ||
         Object.values(filterArray.level).indexOf(true) > -1 ||
         Object.values(filterArray.price).indexOf(true) > -1
@@ -1183,6 +1197,8 @@
         renderElement(eventList);
       }
     };
+    
+    // to nie generuje ceny tylko pobiera
     const generatePrice = (e) => {
       let price = e.cost;
       if (Number.isFinite(price)) {
@@ -1193,27 +1209,39 @@
         return price;
       }
     };
-
+    
+    // unikałbym takich zmiennych jak "e" => jeśli już coś takiego to domniemywałbym że to event, ale i tak 
+    // literki nic nie kosztują, więc warto po prostu wpisać co tam chcesz faktycznie podzielić - pewnie element 
+    // + nazewnictwo display - > sugeruje że to taki "render", więc dałbym formatDuration/getDurationDisplay
     const displayDuration = (e) => {
       let arrayDuration = e.duration.split(":");
-      let arrayInput = `${arrayDuration[0]} h ${arrayDuration[1]} min `;
+      let arrayInput = `${arrayDuration[0]} h ${arrayDuration[1]} min `; 
+      // to już nie jest array - tylko po prostu duration i 
+      //można go od razu zwrócić zamiast dawać w kolejnej linijce
       return arrayInput;
     };
+    // to render element czy elements? skoro przyjmuje jako param listę to nie brzmi :P
     const renderElement = (arrayList) => {
       let contenerList = ``;
       console.log(arrayList.length);
+      //arrayList.length można zrzutować od razu tj. if(!arrayList.length) {
       if (arrayList.length == 0) {
+        // troche mylna przypisana klasa lub samo nazewnictwo "lecture" dla tego elementu - wyrzuciłbym do osobnej metody renderEmpty()
         contenerList = `
         <div class="lecture">
           Ooppps. Wygląda na to, ze nie mamy nic z tym filtrowaniem. Wyślij nam zgłoszenie na <a href="mailto:hello@deisgnways.io">hello@designways.io</a>
         </div>`;
       } else {
+        // lecisz mapem który nic nie zwraca tylko dopisuje do jakiś elementów 
         arrayList.map((workshop) => {
+          // unika się tworzenia zmiennych pomocniczych raczej, podobne rzeczy można objechać z pomocą: 
+          // const tags = workshop.tags.reduce((result, tag) => `${result}<div class="tag__single tag__single--small">${tag}</div>`, '') 
           let tags = "";
           workshop.tag.map((tag) => {
             tags += `<div class="tag__single tag__single--small">${tag}</div>`;
           });
-
+          // jak coś jest stałe to jest stałe - czyli const, 
+          // z innych języków programowania można kminić że to słowo zarezerwowane dla stałych w stylu PI, ale tu jest troche inaczej
           let priceComma = generatePrice(workshop);
           let duration = displayDuration(workshop);
           const currentHtml = `
@@ -1261,12 +1289,14 @@
           contenerList += currentHtml;
         });
       }
+      //litwrówka + consty :P
       let signle = document.getElementById("lecture");
       signle.innerHTML = contenerList;
     };
 
     renderElement(eventList);
-
+    // o mamo, taka tablica jest niepotrzebna, dokladasz wtedy event do każdego elementu w tablicy, 
+    // w JS działa event bubling czyli możesz założyć jeden event click na całość containera ktory bedzie obslugiwal wszystkie kliki
     filterClick.forEach((element) => {
       element.addEventListener("click", filterElement);
     });
