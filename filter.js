@@ -2,11 +2,18 @@ const fetchData = () =>
   fetch("data.json")
     .then((response) => response.json());
 
+const sentEventClick = (eventName) => {
+  gtag('event', 'click', {
+    'event_category': 'Events - Clicks',
+    'event_label': eventName,
+    'value': 1
+  });
+}
 
 (() => {
   
   window.addEventListener("DOMContentLoaded", async (event) => {
-    let eventList = await fetchData();
+    const eventList = await fetchData();
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
     let filterArray = {
       tags: {},
@@ -215,5 +222,16 @@ const fetchData = () =>
     filterClick.forEach((element) => {
       element.addEventListener("click", filterElement);
     });
+
+    document.addEventListener('click', (event) => {
+      if(event.target.classList.contains('lecture__join')) {
+        const foundEvent = eventList
+          .find(item => item.url == event.target.href)
+        if(foundEvent) {
+          sentEventClick(foundEvent.title)
+        }
+      }
+      return false
+    })
   });
 })();
