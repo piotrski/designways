@@ -3,11 +3,10 @@ const fetchData = () =>
     .then((response) => response.json());
 
 
-(async () => {
+(() => {
   
-  let eventList = await fetchData();
-
-  window.addEventListener("DOMContentLoaded", (event) => {
+  window.addEventListener("DOMContentLoaded", async (event) => {
+    let eventList = await fetchData();
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
     let filterArray = {
       tags: {},
