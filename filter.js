@@ -3,7 +3,7 @@ const fetchData = () =>
     .then((response) => response.json());
 
 const sentEventClick = (eventName) => {
-  gtag('event', 'click', {
+  gtag('event', 'click_event', {
     'event_category': 'Events - Clicks',
     'event_label': eventName,
     'value': 1
