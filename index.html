@@ -2,6 +2,27 @@
 <html>
   <head>
     <title>DesignWays Hub - edukacyjny hub dla designerów</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GN8QJ3EFR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6GN8QJ3EFR');
+</script>
+
+<!-- Hotjar Tracking Code for https://designways.io -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:945310,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="main.js"></script>
@@ -34,17 +55,16 @@
       <main class="page">
         <div class="violet">
           <div class="container">
-            <img class="logo spacer" src="images/Logo_horizontal_new.svg" alt="" />
+            <img class="logo spacer" src="images/Logo_horizontal_white.svg" alt="" />
             <h2 class="text__h2">Cały Twój rozwój w jednym miejscu
 </h2>
             <p class="text__paragraph">
-              Szkolenia, warsztaty, konferencje, meetupy i webinary. Cały Twój rozwój
-              w jednym miejscu. Zostaw swój adres email i poznaj wydarzenia, które
-              pomogą Ci w rozwoju!
+              Szkolenia, warsztaty, konferencje, meetupy, webinary i nie tylko – cały Twój rozwój w jednym miejscu. Chcesz dostać dostęp do wersji Beta? Zostaw swój adres email, a my wyślemy Ci tajny dostęp.
+
             </p>
                 <form class="form" onsubmit="handleLogin(event)">
                   <input type="email" class="form__text" name="email" required="required" placeholder="Enter your email" />
-                  <button type="submit" class="form__button">Zapisz się</button>
+                  <button type="submit" class="form__button">Dołącz do Beta-testów</button>
                 </form>
                 <div class="form__rodo">
                   <input type="checkbox" name="newsletter" value="rodo" class="form__checkbox" checked  />
@@ -94,48 +114,6 @@
           /* Get user metadata including email */
           const userMetadata = await magic.user.getMetadata();
           html = `
-          <main class="page">
-        <div class="violet">
-          <div class="container">
-            <img class="logo spacer" src="images/Logo_horizontal_new.svg" alt="" />
-            <h2 class="text__h2">Dzięki! ${userMetadata.email}</h2>
-            <p class="text__paragraph">
-              Dzięki za zapis!
-Powiadomimy Cię, gdy serwis ruszy. Tymczasem… trzymaj za nas kciuki! Jeśli masz jakieś pytania, to odezwij na hello@designways.io.
-            </p>
-            <button class="form__button form__button--minimal" onclick="handleLogout()">Wróć do strony głównej</button>
-
-                
-            
-
-     
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="container">
-            <ul class="list">
-              <li class="list__element list__element--active">
-                <img src="images/check-active.svg" class="list__image" alt="" />
-                Lista wydarzeń z branży kreatywnej
-              </li>
-              <li class="list__element">
-                <img src="images/check.svg" class="list__image" alt="" /> Polecane
-                materiały edukacyjne i kursy<span class="list__span">Wkrótce</span>
-              </li>
-              <li class="list__element">
-                <img src="images/check.svg" class="list__image" alt="" />
-                Spersonalizowane rekomendacje
-                <span class="list__span">Wkrótce</span>
-              </li>
-              <li class="list__element">
-                <img src="images/check.svg" class="list__image" alt="" />
-                Zniżki i program lojalnościowy
-                <span class="list__span">Wkrótce</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </main>
   
                 `;
         }
@@ -168,7 +146,7 @@ Powiadomimy Cię, gdy serwis ruszy. Tymczasem… trzymaj za nas kciuki! Jeśli m
           <div class="container">
             <img
               class="logo spacer"
-              src="images/Logo_horizontal_new.svg"
+              src="images/Logo_horizontal_white.svg"
               alt=""
             />
             <h2 class="text__h2">Ładowanie...</h2>

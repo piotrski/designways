@@ -1,0 +1,1010 @@
+[
+   {
+      "title":"Projektowanie Procesu - Kurs Moderatora Design Thinking Zaawansowany",
+      "url":"http://dt-institute.pl/media/tms/dtp/files/kmdtzppoferta11-1218-19022021.pdf",
+      "img":"https://hub.designways.io/thumbnail/kursModeratoraDesignThinkingOnline.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Katarzyna Talaga-Korcz",
+      "spots":15,
+      "date":"11.2.2021 12:00",
+      "Zakończenie wydarzenia":"19.2.2021 16:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "serviceDesign":true,
+         "productDesign":true,
+         "Badania":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Badania / Research",
+         "Product Design",
+         "Service Design",
+         "UI",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2460
+   },
+   {
+      "title":"Mierniki UX",
+      "url":"https://uxupgrade.pl/szkolenia/mierniki-ux",
+      "img":"https://hub.designways.io/thumbnail/miernikiUX.jpg",
+      "type":"szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Krzysztof Kozak",
+      "spots":12,
+      "date":"17.2.2021 09:30",
+      "Zakończenie wydarzenia":"17.2.2021 16:30",
+      "duration":"0:07",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "Analityka":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Analityka"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":859.8
+   },
+   {
+      "title":"Projektowanie UX",
+      "url":"https://uxupgrade.pl/szkolenia/projektowanie-ux",
+      "img":"https://hub.designways.io/thumbnail/projektowanieUX.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"18.2.2021 09:30",
+      "Zakończenie wydarzenia":"19.2.2021 16:30",
+      "duration":"14:00",
+      "skill":"Junior",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "productDesign":true
+      },
+      "level":{
+         "Poczatkujacy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI",
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":159.8
+   },
+   {
+      "title":"Kurs Moderatora Design Thinking Online",
+      "url":"https://designthinkingkurs.pl/",
+      "img":"https://hub.designways.io/thumbnail/kursModeratoraDesignThinkingOnline.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Katarzyna Talaga-Korcz",
+      "spots":15,
+      "date":"22.2.2021 09:00",
+      "Zakończenie wydarzenia":"26.2.2021 15:00",
+      "duration":"32:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "serviceDesign":true,
+         "productDesign":true,
+         "Badania":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Badania / Research",
+         "Product Design",
+         "Service Design",
+         "UI",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":3936
+   },
+   {
+      "title":"Analityka w UX dla zaawansowanych",
+      "url":"https://uxupgrade.pl/szkolenia/analityka-w-ux-dla-zaawansowanych",
+      "img":"https://hub.designways.io/thumbnail/analitykaWuxDlaZaawansowanych.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Radosław Pawlak",
+      "spots":12,
+      "date":"23.2.2021 09:30",
+      "Zakończenie wydarzenia":"23.2.2021 13:00",
+      "duration":"3:30",
+      "skill":"Senior",
+      "tags":{
+         "UX":true,
+         "Analityka":true
+      },
+      "level":{
+         "Zaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Analityka",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":552.3
+   },
+   {
+      "title":"Wprowadzenie do tworzenia design systemów",
+      "url":"https://uxupgrade.pl/szkolenia/wprowadzenie-do-tworzenia-design-systemow",
+      "img":"https://hub.designways.io/thumbnail/wprowadzenieDoTworzeniaDesignSystemow.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"24.2.2021 09:30",
+      "Zakończenie wydarzenia":"24.2.2021 13:30",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "productDesign":true
+      },
+      "level":{
+         "Poczatkujacy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI",
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":552.3
+   },
+   {
+      "title":"SAFe® 5.0 Scrum Master",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-scrum-master/",
+      "img":"https://hub.designways.io/thumbnail/safeScrumMaster.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"25.2.2021 09:00",
+      "Zakończenie wydarzenia":"26.2.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952
+   },
+   {
+      "title":"Wprowadzenie do UX Writingu",
+      "url":"https://uxupgrade.pl/szkolenia/wprowadzenie-do-ux-writingu",
+      "img":"https://hub.designways.io/thumbnail/wprowadzenieDoUxWritingu.jpg",
+      "type":"szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Kalina Tyrkiel",
+      "spots":12,
+      "date":"2.3.2021 09:30",
+      "Zakończenie wydarzenia":"2.3.2021 13:30",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "UX":true,
+         "productDesign":true
+      },
+      "level":{
+         "Poczatkujacy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":552.3
+   },
+   {
+      "title":"5 Elementów - trening moderatora design thinking",
+      "url":"http://dt-institute.pl/media/tms/dtp/files/kmdto5eofertaiiedycjaz.pdf",
+      "img":"https://hub.designways.io/thumbnail/5elementówTreningModeratoraDesignThinking.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Katarzyna Talaga-Korcz",
+      "spots":15,
+      "date":"2.3.2021 13:00",
+      "Zakończenie wydarzenia":"8.4.2021 12:00",
+      "duration":"30:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "serviceDesign":true,
+         "productDesign":true,
+         "Badania":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI",
+         "Service Design",
+         "Product Design",
+         "Badania / Research"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2890.5
+   },
+   {
+      "title":"Zaawansowane techniki projektowania Axure RP",
+      "url":"https://uxupgrade.pl/szkolenia/zaawansowane-techniki-projektowania-axure",
+      "img":"https://hub.designways.io/thumbnail/zaawansowaneTechnikiProjektowaniaAxure.jpg",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"4.3.2021 09:30",
+      "duration":"4:00",
+      "skill":"Senior",
+      "tags":{
+         "UX":true,
+         "UI":true
+      },
+      "level":{
+         "Zaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UI",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":552.3
+   },
+   {
+      "title":"Wprowadzenie do zawodu specjalisty UX",
+      "url":"https://uxupgrade.pl/szkolenia/wprowadzenie-do-zawodu-specjalisty-ux",
+      "img":"https://hub.designways.io/thumbnail/wprowadzenieDoZawoduSpecjalistyUx.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Sałata",
+      "spots":12,
+      "date":"5.3.2021 09:45",
+      "Zakończenie wydarzenia":"5.3.2021 14:15",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "UX":true
+      },
+      "level":{
+         "Poaczatkujacy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":552.3
+   },
+   {
+      "title":"SAFe® 5.0 Scrum Master",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-scrum-master/",
+      "img":"https://hub.designways.io/thumbnail/safeScrumMaster.jpg",
+      "type":"konferencja",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"6.3.2021 09:00",
+      "Zakończenie wydarzenia":"7.3.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952
+   },
+   {
+      "title":"Eyetracking w UX",
+      "url":"https://uxupgrade.pl/szkolenia/eyetracking-w-ux",
+      "img":"https://hub.designways.io/thumbnail/eyetrackingWux.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Joanna Grzelak",
+      "spots":12,
+      "date":"9.3.2021 09:30",
+      "Zakończenie wydarzenia":"9.3.2021 13:30",
+      "duration":"4:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "Badania":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Badania / Research",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+{
+      "title":"SAFe® 5.0 Advanced Scrum Master",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-advanced-scrum-master/",
+      "img":"https://hub.designways.io/thumbnail/safeAdvancedScrumMaster.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"11.3.2021 09:00",
+      "Zakończenie wydarzenia":"12.3.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952
+   },
+   {
+      "title":"Design Sprint dla zaawansowanych",
+      "url":"https://uxupgrade.pl/szkolenia/design-sprint-dla-zaawansowanych",
+      "img":"https://hub.designways.io/thumbnail/designSprintDlaZaawansowanych.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"11.3.2021 09:30",
+      "Zakończenie wydarzenia":"11.3.2021 13:30",
+      "duration":"4:00",
+      "skill":"Senior",
+      "tags":{
+         "UX":true,
+         "UI":true
+      },
+      "level":{
+         "Zaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+   {
+      "title":"SAFe® 5.0 For Teams",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-for-teams/",
+      "img":"https://hub.designways.io/thumbnail/safeForTeams.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"13.3.2021 09:00",
+      "Zakończenie wydarzenia":"14.3.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952.0
+   },
+   {
+      "title":"Prowadzenie warsztatów UX",
+      "url":"https://uxupgrade.pl/szkolenia/prowadzenie-warsztatow-ux",
+      "img":"https://hub.designways.io/thumbnail/prowadzenieWarsztatowUx.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Wojciech Chojnacki",
+      "spots":12,
+      "date":"16.3.2021 09:00",
+      "Zakończenie wydarzenia":"19.3.2021 13:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "productDesign":true,
+         "serviceDesign":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Product Design",
+         "Service Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":1966.8
+   },
+   {
+      "title":"Architektura informacji w e-commerce",
+      "url":"https://uxupgrade.pl/szkolenia/architektura-informacji-w-e-commerce",
+      "img":"https://hub.designways.io/thumbnail/architekturaInformacjiWecommerce.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Witold Janiszewski",
+      "spots":12,
+      "date":"17.3.2021 09:30",
+      "Zakończenie wydarzenia":"17.3.2021 13:30",
+      "duration":"4:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "UI":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+   {
+      "title":"SAFe® 5.0 Scrum Master",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-scrum-master/",
+      "img":"https://hub.designways.io/thumbnail/safeScrumMaster.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"18.3.2021 09:00",
+      "Zakończenie wydarzenia":"19.3.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952.0
+   },
+   {
+      "title":"Analityka w UX",
+      "url":"https://uxupgrade.pl/szkolenia/analityka-w-ux",
+      "img":"https://hub.designways.io/thumbnail/CircularDesign.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Radosław Pawlak",
+      "spots":12,
+      "date":"18.3.2021 09:30",
+      "Zakończenie wydarzenia":"18.3.2021 13:30",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "Analityka":true,
+         "UX":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Analityka",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":736.8
+   },
+   {
+      "title":"Dostepność w pigułce",
+      "url":"https://uxupgrade.pl/szkolenia/dostepnosc-w-pigulce",
+      "img":"https://hub.designways.io/thumbnail/dostepnosdWpigulce.jpg",
+      "type":"Skolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Źrołka",
+      "spots":12,
+      "date":"23.3.2021 09:30",
+      "Zakończenie wydarzenia":"23.2.2021 16:30",
+      "duration":"7:00",
+      "skill":"Regular",
+      "tags":{
+         "productDesign":true,
+         "UX":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":1228.8
+   },
+   {
+      "title":"Podstawy projektowania w Figmie",
+      "url":"https://uxupgrade.pl/szkolenia/podstawy-projektowania-w-figmie",
+      "img":"https://hub.designways.io/thumbnail/podstawyProjektowaniaWfigmie.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Witold Janiszewski, Łukasz Rybkowski",
+      "spots":12,
+      "date":"25.3.2021 09:30",
+      "Zakończenie wydarzenia":"25.3.2021 16:30",
+      "duration":"7:00",
+      "skill":"Junior",
+      "tags":{
+         "UI":true,
+         "UX":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "UI"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":982.8
+   },
+   {
+      "title":"Leading SAFe® 5.0",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/leading-safe-szkolenie-online/",
+      "img":"https://hub.designways.io/thumbnail/leadingSafe5.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"27.3.2021 09:00",
+      "Zakończenie wydarzenia":"28.3.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2583.0
+   },
+   {
+      "title":"UX chatbotów",
+      "url":"https://uxupgrade.pl/szkolenia/ux-chatbotow",
+      "img":"https://hub.designways.io/thumbnail/uxCchatbotow.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Anna Schneider",
+      "spots":12,
+      "date":"30.3.2021 09:30",
+      "Zakończenie wydarzenia":"30.3.2021 14:30",
+      "duration":"4:30",
+      "skill":"Junior",
+      "tags":{
+         "productDesign":true,
+         "UX":true,
+         "UI":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Design",
+         "UX",
+         "UI"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":736.8
+   },
+   {
+      "title":"Value Proposition Design",
+      "url":"https://uxupgrade.pl/szkolenia/value-proposition-design",
+      "img":"https://hub.designways.io/thumbnail/valuePropositionDesign.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Wojciech Chojnacki",
+      "spots":12,
+      "date":"8.4.2021 09:30",
+      "Zakończenie wydarzenia":"8.4.2021 13:30",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "productDesign":true,
+         "UX":true,
+         "serviceDesign":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Product Design",
+         "Service Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":736.8
+   },
+   {
+      "title":"SAFe® 5.0 For Teams",
+      "url":"https://zwinnazmiana.com/szkolenia/scaled-agile-framework-safe/safe-for-teams/",
+      "img":"https://hub.designways.io/thumbnail/safeForTeams.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Michał Papież",
+      "spots":20,
+      "date":"9.4.2021 09:00",
+      "Zakończenie wydarzenia":"9.4.2021 17:00",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "prooductManagement":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Management"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":2952.0
+   },
+   {
+      "title":"Podstawy projektowania w Axure RP",
+      "url":"https://uxupgrade.pl/szkolenia/podstawy-projektowania-w-axure-rp",
+      "img":"https://hub.designways.io/thumbnail/PodstawyProjektowaniaWaxureRP.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"9.4.2021 09:30",
+      "Zakończenie wydarzenia":"9.4.2021 13:30",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "UI":true,
+         "UX":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UI",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+   {
+      "title":"Wprowadzenie do Design Sprint",
+      "url":"https://uxupgrade.pl/szkolenia/wprowadzenie-do-design-sprint",
+      "img":"https://hub.designways.io/thumbnail/wprowadzenieDoDesignSprint.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Piotr Kozłowski",
+      "spots":12,
+      "date":"13.4.2021 09:30",
+      "Zakończenie wydarzenia":"13.4.2021 13:00",
+      "duration":"4:00",
+      "skill":"Junior",
+      "tags":{
+         "productDesign":true,
+         "UX":true
+      },
+      "level":{
+         "Podstawowy":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Design",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+   {
+      "title":"ReQuest 2021 Online",
+      "url":"https://www.facebook.com/events/819075058881820",
+      "img":"https://hub.designways.io/thumbnail/reQuest2021Online.jpg",
+      "type":"konferencja",
+      "location":"Online",
+      "speaker":"Wielu prowadzących",
+      "spots":200,
+      "date":"15.4.2021 09:00",
+      "Zakończenie wydarzenia":"16.4.2021 17:30",
+      "duration":"16:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "UI":true,
+         "serviceDesign":true,
+         "productDesign":true,
+         "Badania":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Darmowe":true
+      },
+      "tag":[
+         "Product Design",
+         "Service Design",
+         "UX",
+         "UI",
+         "Analityka"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":"Darmowe"
+   },
+   {
+      "title":"Projektowanie prywatności w produktach cyfrowych",
+      "url":"https://uxupgrade.pl/szkolenia/projektowanie-prywatnosci-w-produktach-cyfrowych",
+      "img":"https://hub.designways.io/thumbnail/projektowaniePrywatnościWproduktachCyfrowych.jpg",
+      "type":"Meetup",
+      "location":"Online",
+      "speaker":"Katarzyna Muszyńska, Mariola Więckowska",
+      "spots":12,
+      "date":"13.5.2021 09:30",
+      "Zakończenie wydarzenia":"13.5.2021 14:30",
+      "duration":"5:00",
+      "skill":"Regular",
+      "tags":{
+         "UX":true,
+         "productDesign":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "UX",
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":490.8
+   },
+   {
+      "title":"Kreatywność dla liderów",
+      "url":"www.facebook.com/events/1061434210996941",
+      "img":"https://hub.designways.io/thumbnail/kreatywnoscDlaLiderow.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Seweryn Rudnicki, Łukasz Maźnica",
+      "spots":12,
+      "date":"11.2.2021 09:00",
+      "Zakończenie wydarzenia":"18.2.2021 13:00",
+      "duration":"12:00",
+      "skill":"Regular",
+      "tags":{
+         "Branding":true,
+         "serviceDesign":true,
+         "productDesign":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Branding",
+         "Product Design",
+         "Service Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":800.0
+   },
+   {
+      "title":"Circular Design - poznaj i zrozum nowy kontekst projektowania przyjaznego środowisku",
+      "url":"https://fb.me/e/1Uo4VtoRw",
+      "img":"https://hub.designways.io/thumbnail/CircularDesign.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Agata Miryn-Sienkiewicz",
+      "spots":8,
+      "date":"18.3.2021 16:00",
+      "Zakończenie wydarzenia":"18.3.2021 18:30",
+      "duration":"2:30",
+      "skill":"Regular",
+      "tags":{
+         "productDesign":true
+      },
+      "level":{
+         "Sredniozaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Product Design"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":349.0
+   },
+   {
+      "title":"Masterclass. Analiza jakościowa dla zaawansowanych",
+      "url":"https://learn.cux.io/analiza-masterclass",
+      "img":"https://hub.designways.io/thumbnail/masterclassAnalizJakosciowaDlaZaawansowanych.jpg",
+      "type":"Szkolenie / warsztat",
+      "location":"Online",
+      "speaker":"Paulina Walkowiak",
+      "spots":20,
+      "date":"18.2.2021 9:00",
+      "Zakończenie wydarzenia":"18.2.2021 17:00",
+      "duration":"8:00",
+      "skill":"Senior",
+      "tags":{
+         "Analityka":true,
+         "Badania":true,
+         "UX":true
+      },
+      "level":{
+         "Zaawansowany":true
+      },
+      "price":{
+         "Platne":true
+      },
+      "tag":[
+         "Analityka",
+         "Badania / Research",
+         "UX"
+      ],
+      "language":"polski",
+      "certification":"Tak",
+      "cost":999.0
+   }
+]

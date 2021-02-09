@@ -10,6 +10,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
@@ -592,6 +593,7 @@ input {
   margin: 10px 10px 0 0;
   font-family: Manrope;
   font-style: normal;
+  cursor: pointer;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;
@@ -599,6 +601,12 @@ input {
   color: #575983;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.tag__single:hover {
+  background-color: #2C2856;
+  cursor: pointer;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -628,6 +636,12 @@ input {
   padding: 0.6rem 1.2rem;
 }
 
+.tag__single--small:hover {
+  background: rgba(232, 230, 243, 0.6);
+  color: #575983;
+  cursor: default;
+}
+
 @media (max-width: 768px) {
   .tag__single--small {
     min-height: 16px;
@@ -637,7 +651,6 @@ input {
 .lecture {
   width: 100%;
   min-height: 50px;
-  max-height: 100vh;
   background: #FFFFFF;
   border: 1px solid #CED3E0;
   -webkit-box-sizing: border-box;
@@ -662,7 +675,6 @@ input {
 
 @media (max-width: 992px) {
   .lecture {
-    height: 80vh;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto auto;
@@ -703,6 +715,8 @@ input {
 .lecture__image {
   margin-right: 2rem;
   max-width: 19rem;
+  -o-object-fit: contain;
+     object-fit: contain;
   max-height: 19rem;
 }
 
@@ -800,6 +814,16 @@ input {
       -ms-flex-align: center;
           align-items: center;
   color: #FFFFFF;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.lecture__join:hover {
+  color: #2C2856;
+  border: 2px solid #2C2856;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #fff;
 }
 
 .lecture__join--testimonial {
@@ -813,7 +837,6 @@ input {
 
 .lecture__rightGrid {
   border-left: 1px solid #EEEFF2;
-  height: 100%;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 1rem;
@@ -829,6 +852,7 @@ input {
   font-size: 1.4rem;
   line-height: 150%;
   color: #3A3C60;
+  row-gap: 1rem;
 }
 
 @media (max-width: 576px) {

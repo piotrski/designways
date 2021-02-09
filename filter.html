@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>DesignWays Hub - edukacyjny hub dla designerów</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6GN8QJ3EFR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6GN8QJ3EFR");
+    </script>
+
+    <!-- Hotjar Tracking Code for https://designways.io -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 945310, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
     </style>
     <link rel="stylesheet" href="main.css" />
     <script src="filter.js"></script>
-    <!-- 1️⃣ Install Magic SDK -->
     <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
     <script>
-      // /* 2️⃣ Initialize Magic Instance */
-      // let magic = new Magic("pk_live_6A8CF7F906BC895E");
+      let magic = new Magic("pk_live_6A8CF7F906BC895E");
 
-      // /* 3️⃣ Implement Render Function */
-      // const render = async () => {
-      //   const isLoggedIn = await magic.user.isLoggedIn();
-      //   console.log(isLoggedIn);
-      //   if (!isLoggedIn) {
-      //     window.location.replace(`https://hub.designways.io/`);
-      //   }
-      // };
-      // const handleLogout = async () => {
-      //   await magic.user.logout();
-      //   render();
-      // };
+      const render = async () => {
+        const isLoggedIn = await magic.user.isLoggedIn();
+        console.log(isLoggedIn);
+        if (!isLoggedIn) {
+          window.location.replace(`https://hub.designways.io/`);
+        }
+      };
+      const handleLogout = async () => {
+        await magic.user.logout();
+        render();
+      };
     </script>
   </head>
   <body onload="render()">
@@ -35,14 +67,23 @@
         <img src="images/Logo_horizontal_white.svg" alt="" />
         <nav class="nav__container display__flex disp">
           <ul class="nav__list display__row">
-            <li class="nav__element nav__logout" onclick="handleLogout()">
-              Zakończ sesję
+            <li class="nav__element">
+              <a class="nav__element" href="mailto:hello@designways.io">hello@designways.io</a></li>
             </li>
             <li class="nav__element">
-              <img src="/images/facebook.svg" alt="" />
+              <a
+                href="https://www.facebook.com/designwaysconf
+          "
+                ><img src="/images/facebook.svg" alt=""
+              /></a>
             </li>
             <li class="nav__element">
-              <img src="/images/insta_icon.svg" alt="" />
+              <a
+                href="https://www.instagram.com/designwaysconf/
+          "
+              >
+                <img src="/images/insta_icon.svg" alt=""
+              /></a>
             </li>
           </ul>
         </nav>
@@ -60,13 +101,10 @@
       <div class="tag__container">
         <h6 class="text__h6">Wybierz tematyke</h6>
         <div class="tag__tags">
-          <!-- <button class="tag__single tagsFilter" data-key="3D">3D</button> -->
           <button class="tag__single tagsFilter" data-key="Analityka">
             Analityka
           </button>
-          <!-- <button class="tag__single tagsFilter" data-key="Animacje">
-            Animacje
-          </button> -->
+
           <button class="tag__single tagsFilter" data-key="Badania">
             Badania
           </button>
@@ -84,7 +122,6 @@
           </button>
           <button class="tag__single tagsFilter" data-key="UI">UI</button>
           <button class="tag__single tagsFilter" data-key="UX">UX</button>
-          <!-- <button class="tag__single tagsFilter" data-key="Wideo">Wideo</button> -->
         </div>
       </div>
       <div class="tag__container">
@@ -117,146 +154,9 @@
       </div>
     </div>
     <div class="container container--big" id="lecture">
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-      </div>
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-      </div>
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-        <div class="lecture__half buttonMobile">
-          <a href="#" class="lecture__join buttonMobile__cta"
-            >Dowiedz się więcej</a
-          >
-        </div>
-      </div>
+     
+     
+      
     </div>
     <div
       class="container container--xl AddToDatabase violet violet--alternative"
@@ -267,7 +167,7 @@
         class="AddToDatabase__image"
       />
       <h3 class="AddToDatabase__h3">
-        Zaproponuj ciekawe wydarzenie lub prowadzącego!
+        Zaproponuj nowe wydarzenie do naszej bazy.
       </h3>
       <a href="#" class="AddToDatabase__button"
         ><img src="images/send.svg" alt="" class="AddToDatabase__buttonIcon" />
@@ -278,14 +178,33 @@
       <div class="filterFooter__footerHalf">
         <img src="images/Logo_horizontal_new.svg" alt="logo-bottom" />
         <p class="filterFooter__footerCopyrights">
-          All Rights Reserverd © 2020 DesignWays
+          All Rights Reserverd © 2021 DesignWays. Skontaktuj się pod:
+          <a
+            class="filterFooter__footerCopyrights"
+            href="mailto:hello@designways.io"
+            >hello@deisgnways.io</a
+          >
         </p>
       </div>
       <div class="filterFooter__footerHal filterFooter__rightFooter">
-        <p class="filterFooter__footerTerms">Terms & Privacy</p>
+        <p class="filterFooter__footerTerms">
+          <a
+            href="https://www.designways.io/polityka-prywatnosci.html
+          "
+            class="filterFooter__footerTerms"
+          >
+            Terms & Privacy</a
+          >
+        </p>
         <div class="filterFooter__socialMedia">
-          <img src="images/facebook-dark.svg" alt="" />
-          <img src="images/instagram-dark.svg" alt="" />
+          <a
+            href="https://www.facebook.com/designwaysconf
+          "
+            ><img src="images/facebook-dark.svg" alt=""
+          /></a>
+          <a href="https://www.instagram.com/designwaysconf/"
+            ><img src="images/instagram-dark.svg" alt=""
+          /></a>
         </div>
       </div>
     </footer>
