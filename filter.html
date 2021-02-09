@@ -44,19 +44,16 @@
     </style>
     <link rel="stylesheet" href="main.css" />
     <script src="filter.js"></script>
-    <!-- 1️⃣ Install Magic SDK -->
     <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
     <script>
-      /* 2️⃣ Initialize Magic Instance */
       let magic = new Magic("pk_live_6A8CF7F906BC895E");
 
-      /* 3️⃣ Implement Render Function */
       const render = async () => {
         const isLoggedIn = await magic.user.isLoggedIn();
-        // console.log(isLoggedIn);
-        // if (!isLoggedIn) {
-        //   window.location.replace(`https://hub.designways.io/`);
-        // }
+        console.log(isLoggedIn);
+        if (!isLoggedIn) {
+          window.location.replace(`https://hub.designways.io/`);
+        }
       };
       const handleLogout = async () => {
         await magic.user.logout();
@@ -104,13 +101,10 @@
       <div class="tag__container">
         <h6 class="text__h6">Wybierz tematyke</h6>
         <div class="tag__tags">
-          <!-- <button class="tag__single tagsFilter" data-key="3D">3D</button> -->
           <button class="tag__single tagsFilter" data-key="Analityka">
             Analityka
           </button>
-          <!-- <button class="tag__single tagsFilter" data-key="Animacje">
-            Animacje
-          </button> -->
+
           <button class="tag__single tagsFilter" data-key="Badania">
             Badania
           </button>
@@ -128,7 +122,6 @@
           </button>
           <button class="tag__single tagsFilter" data-key="UI">UI</button>
           <button class="tag__single tagsFilter" data-key="UX">UX</button>
-          <!-- <button class="tag__single tagsFilter" data-key="Wideo">Wideo</button> -->
         </div>
       </div>
       <div class="tag__container">
@@ -161,146 +154,9 @@
       </div>
     </div>
     <div class="container container--big" id="lecture">
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-      </div>
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-      </div>
-      <div class="lecture">
-        <div class="lecture__half">
-          <img class="lecture__image" src="images/image-thumbnail.jpg" alt="" />
-          <div class="lecture__description">
-            <div class="lecture__tags">
-              <div class="tag__single tag__single--small">UX Design</div>
-              <div class="tag__single tag__single--small">UX Design</div>
-            </div>
-
-            <div class="level level__basic">Początkujący</div>
-            <div class="lecture__title">
-              Prodtuct Discovery – wykorzystaj najlepsze praktyki badań i
-              eksperymentów biznesowych i buduj wartościowe produkty!
-            </div>
-            <a href="#" class="lecture__join buttonDesktop"
-              >Dowiedz się więcej</a
-            >
-            <a href="#" class="lecture__join lecture__join--testimonial"
-              >Opinie</a
-            >
-          </div>
-        </div>
-        <div class="lecture__half lecture__rightGrid">
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Prowadzący</span>Tomasz
-            Osowski
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Data</span>20.11.2020
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Czas Trwania</span>45 minut
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Lokalizacja</span>Kraków
-          </div>
-          <div class="lecture__rightGrid__borderAndSpacing">
-            <span class="lecture__rightGrid--span">Typ</span>Stacjonarne
-          </div>
-          <div>
-            <span class="lecture__rightGrid--span">Liczba Miejsc</span>1240
-          </div>
-          <div class="lecture__rightGrid__price">Darmowe</div>
-        </div>
-        <div class="lecture__half buttonMobile">
-          <a href="#" class="lecture__join buttonMobile__cta"
-            >Dowiedz się więcej</a
-          >
-        </div>
-      </div>
+     
+     
+      
     </div>
     <div
       class="container container--xl AddToDatabase violet violet--alternative"

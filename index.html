@@ -105,11 +105,11 @@
         </div>
       </main>
               `;
-              // if (isLoggedIn){
-              //   let location = window.location.href
+              if (isLoggedIn){
+                let location = window.location.href
                 
-              //   window.location.replace(`https://hub.designways.io/filter.html`)
-              // }
+                window.location.replace(`https://hub.designways.io/filter.html`)
+              }
         if (isLoggedIn) {
           /* Get user metadata including email */
           const userMetadata = await magic.user.getMetadata();

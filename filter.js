@@ -1,17 +1,14 @@
-const fetchData = () => 
-  fetch("data.json")
-    .then((response) => response.json());
+const fetchData = () => fetch("data.json").then((response) => response.json());
 
 const sentEventClick = (eventName) => {
-  gtag('event', 'click_event', {
-    'event_category': 'Events - Clicks',
-    'event_label': eventName,
-    'value': 1
+  gtag("event", "click_event", {
+    event_category: "Events - Clicks",
+    event_label: eventName,
+    value: 1,
   });
-}
+};
 
 (() => {
-  
   window.addEventListener("DOMContentLoaded", async (event) => {
     const eventList = await fetchData();
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
@@ -180,7 +177,7 @@ const sentEventClick = (eventName) => {
            <div class="lecture__title">
            ${workshop.title}
            </div>
-           <a href="${workshop.url}" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
+           <a href="${workshop.url}" target="_blank" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
           
          </div>
        </div>
@@ -223,15 +220,16 @@ const sentEventClick = (eventName) => {
       element.addEventListener("click", filterElement);
     });
 
-    document.addEventListener('click', (event) => {
-      if(event.target.classList.contains('lecture__join')) {
-        const foundEvent = eventList
-          .find(item => item.url == event.target.href)
-        if(foundEvent) {
-          sentEventClick(foundEvent.title)
+    document.addEventListener("click", (event) => {
+      if (event.target.classList.contains("lecture__join")) {
+        const foundEvent = eventList.find(
+          (item) => item.url == event.target.href
+        );
+        if (foundEvent) {
+          sentEventClick(foundEvent.title);
         }
       }
-      return false
-    })
+      return false;
+    });
   });
 })();
