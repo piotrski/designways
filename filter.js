@@ -27,9 +27,7 @@ const sentEventClick = (eventName) => {
     }
 
     const toggleClass = (e) => {
-      e.target.classList.value.includes("tag__single--active")
-        ? e.target.classList.remove("tag__single--active")
-        : e.target.classList.add("tag__single--active");
+      e.target.classList.toggle("tag__single--active");
     };
 
     const filterItem = (item) => {
@@ -83,7 +81,6 @@ const sentEventClick = (eventName) => {
           }
         }
       }
-      // console.log(returnElement);
 
       if (returnElement.price === null) {
         returnElement.price = true;
@@ -123,10 +120,8 @@ const sentEventClick = (eventName) => {
       checkWhatToDisplay(FilteredList);
     };
 
-    // nazwy zmiennych zawsze z małych - z dużej sugeruje że to typ lub enum
     const checkWhatToDisplay = (FilteredList) => {
       if (
-        // własnie to co pisałem o formacie danych mocno Ci tu dokłada logiki
         Object.values(filterArray.tags).indexOf(true) > -1 ||
         Object.values(filterArray.level).indexOf(true) > -1 ||
         Object.values(filterArray.price).indexOf(true) > -1
@@ -137,50 +132,38 @@ const sentEventClick = (eventName) => {
       }
     };
 
-    // to nie generuje ceny tylko pobiera
-    const generatePrice = (e) => {
-      let price = e.cost;
-      if (Number.isFinite(price)) {
-        price = e.cost.toFixed(2).replace(/\./g, ",");
-        price += " zł";
-        return price;
+    const displayPriceWithCurrency = (singleEvent) => {
+      if (Number.isFinite(singleEvent.cost)) {
+        return `${singleEvent.cost.toFixed(2).replace(/\./g, ",")} zł`;
       } else {
-        return price;
+        return singleEvent.cost;
       }
     };
 
-    // literki nic nie kosztują, więc warto po prostu wpisać co tam chcesz faktycznie podzielić - pewnie element
-    // + nazewnictwo display - > sugeruje że to taki "render", więc dałbym formatDuration/getDurationDisplay
     const formatDuration = (singleEvent) => {
-      let arrayDuration = singleEvent.duration.split(":");
-      let arrayInput = `${arrayDuration[0]} h ${arrayDuration[1]} min `;
-      // to już nie jest array - tylko po prostu duration i
-      //można go od razu zwrócić zamiast dawać w kolejnej linijce
-      return arrayInput;
+      let duration = singleEvent.duration.split(":");
+
+      return `${duration[0]} h ${duration[1]} min`;
     };
-    // to render element czy elements? skoro przyjmuje jako param listę to nie brzmi :P
+
+    const renderEmpty = () => {
+      contenerList = `
+      <div class="lecture">
+        Ooppps. Wygląda na to, ze nie mamy nic z tym filtrowaniem. Wyślij nam zgłoszenie na <a href="mailto:hello@deisgnways.io">hello@designways.io</a>
+      </div>`;
+    };
+
     const renderElement = (arrayList) => {
       let contenerList = ``;
-      //arrayList.length można zrzutować od razu tj. if(!arrayList.length) {
-      if (arrayList.length == 0) {
-        // troche mylna przypisana klasa lub samo nazewnictwo "lecture" dla tego elementu - wyrzuciłbym do osobnej metody renderEmpty()
-        contenerList = `
-        <div class="lecture">
-          Ooppps. Wygląda na to, ze nie mamy nic z tym filtrowaniem. Wyślij nam zgłoszenie na <a href="mailto:hello@deisgnways.io">hello@designways.io</a>
-        </div>`;
+      if (!arrayList.length) {
+        renderEmpty();
       } else {
-        // lecisz mapem który nic nie zwraca tylko dopisuje do jakiś elementów
         arrayList.forEach((workshop) => {
-          // unika się tworzenia zmiennych pomocniczych raczej, podobne rzeczy można objechać z pomocą:
-          // const tags = workshop.tags.reduce((result, tag) => `${result}<div class="tag__single tag__single--small">${tag}</div>`, '')
-          let tags = "";
-          workshop.tag.map((tag) => {
-            tags += `<div class="tag__single tag__single--small">${tag}</div>`;
-          });
-          // jak coś jest stałe to jest stałe - czyli const,
-          // z innych języków programowania można kminić że to słowo zarezerwowane dla stałych w stylu PI, ale tu jest troche inaczej
-          let priceComma = generatePrice(workshop);
-          let duration = formatDuration(workshop);
+          const tags = workshop.tag.reduce(
+            (result, tagg) =>
+              `${result}<div class="tag__single tag__single--small">${tagg}</div>`,
+            ""
+          );
           const currentHtml = `
       <div class="lecture">
        <div class="lecture__half">
@@ -193,50 +176,58 @@ const sentEventClick = (eventName) => {
            <div class="lecture__title">
            ${workshop.title}
            </div>
-           <a href="${workshop.url}" target="_blank" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
+           <a href="${
+             workshop.url
+           }" target="_blank" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
           
          </div>
        </div>
        <div class="lecture__half lecture__rightGrid">
          <div class="lecture__rightGrid__borderAndSpacing">
-           <span class="lecture__rightGrid--span">Prowadzący</span>${workshop.speaker}
+           <span class="lecture__rightGrid--span">Prowadzący</span>${
+             workshop.speaker
+           }
          </div>
          <div class="lecture__rightGrid__borderAndSpacing">
            <span class="lecture__rightGrid--span">Data</span>${workshop.date}
          </div>
          <div>
-           <span class="lecture__rightGrid--span">Czas Trwania</span>${duration}
+           <span class="lecture__rightGrid--span">Czas Trwania</span>${formatDuration(
+             workshop
+           )}
          </div>
          <div class="lecture__rightGrid__borderAndSpacing">
-           <span class="lecture__rightGrid--span">Lokalizacja</span>${workshop.location}
+           <span class="lecture__rightGrid--span">Lokalizacja</span>${
+             workshop.location
+           }
          </div>
          <div class="lecture__rightGrid__borderAndSpacing">
            <span class="lecture__rightGrid--span">Typ</span>${workshop.type}
          </div>
          <div>
-           <span class="lecture__rightGrid--span">Liczba Miejsc</span>${workshop.spots}
+           <span class="lecture__rightGrid--span">Liczba Miejsc</span>${
+             workshop.spots
+           }
          </div>
-         <div class="lecture__rightGrid__price">${priceComma}</div>
+         <div class="lecture__rightGrid__price">${displayPriceWithCurrency(
+           workshop
+         )}</div>
        </div>
        <div class="lecture__half buttonMobile">
-          <a href="${workshop.url}" class="lecture__join buttonMobile__cta">Dowiedz się więcej</a>
+          <a href="${
+            workshop.url
+          }" class="lecture__join buttonMobile__cta">Dowiedz się więcej</a>
         </div>
      </div>`;
-          tags = "";
           contenerList += currentHtml;
         });
       }
       //litwrówka + consty :P
-      let signle = document.getElementById("lecture");
-      signle.innerHTML = contenerList;
+      const single = document.getElementById("lecture");
+      single.innerHTML = contenerList;
     };
 
     renderElement(eventList);
-    // o mamo, taka tablica jest niepotrzebna, dokladasz wtedy event do każdego elementu w tablicy,
-    // w JS działa event bubling czyli możesz założyć jeden event click na całość containera ktory bedzie obslugiwal wszystkie kliki
-    filterClick.forEach((element) => {
-      element.addEventListener("click", filterElement);
-    });
 
     document.addEventListener("click", (event) => {
       if (event.target.classList.contains("lecture__join")) {
@@ -246,7 +237,10 @@ const sentEventClick = (eventName) => {
         if (foundEvent) {
           sentEventClick(foundEvent.title);
         }
+      } else if (event.target.classList.contains("tagsFilter")) {
+        filterElement(event);
       }
+      console.log("return false");
       return false;
     });
   });

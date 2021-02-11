@@ -51,10 +51,10 @@
       const render = async () => {
         const isLoggedIn = await magic.user.isLoggedIn();
         console.log(isLoggedIn);
-        if (!isLoggedIn) {
-          window.location.replace(`https://hub.designways.io/`);
-        }
-      };
+      //   if (!isLoggedIn) {
+      //     window.location.replace(`https://hub.designways.io/`);
+      //   }
+      // };
       const handleLogout = async () => {
         await magic.user.logout();
         render();
@@ -169,7 +169,7 @@
       <h3 class="AddToDatabase__h3">
         Zaproponuj nowe wydarzenie do naszej bazy.
       </h3>
-      <a href="#" class="AddToDatabase__button"
+      <a href="https://airtable.com/shrAwlFIeLbevMEa6" target="_blank" class="AddToDatabase__button"
         ><img src="images/send.svg" alt="" class="AddToDatabase__buttonIcon" />
         <span class="AddToDatabase__buttonText">Wyślij propozycję</span></a
       >
