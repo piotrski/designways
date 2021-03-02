@@ -13,12 +13,17 @@ const sentEventClick = (eventName) => {
     const eventList = await fetchData();
     // taka tablica jest niepotrzebna
     // zauważ że wtedy do każdego elementu dokładasz handler
+    const displayAmountOfEvent = (arrayList) => {
+      document.getElementById("eventNumber").innerHTML = arrayList.length;
+    };
+
     let filterClick = [...document.querySelectorAll(".tagsFilter")];
     let filterArray = {
       tags: {},
       level: {},
       price: {},
     };
+    let sortSettings = false;
 
     for (const key of filterClick) {
       filterArray.tags[key.dataset.key] = null;
@@ -95,7 +100,10 @@ const sentEventClick = (eventName) => {
     };
 
     const filterElement = (e) => {
-      toggleClass(e);
+      if (e.target.classList.contains("tag__single")) {
+        toggleClass(e);
+      }
+
       if (e.target.dataset.key) {
         const clickedTag = e.target.dataset.key.toString();
         filterArray.tags[`${clickedTag}`] == null
@@ -133,10 +141,10 @@ const sentEventClick = (eventName) => {
     };
 
     const displayPriceWithCurrency = (singleEvent) => {
-      if (Number.isFinite(singleEvent.cost)) {
+      if (singleEvent.cost > 0) {
         return `${singleEvent.cost.toFixed(2).replace(/\./g, ",")} zł`;
       } else {
-        return singleEvent.cost;
+        return `Darmowe`;
       }
     };
 
@@ -153,19 +161,123 @@ const sentEventClick = (eventName) => {
       </div>`;
     };
 
+    const sortList = (arrayList) => {
+      if (sortSettings) {
+        return arrayList.sort((a, b) => a.cost - b.cost);
+      } else {
+        return arrayList.sort(
+          (a, b) =>
+            moment(a.date, "D.MM.YYYY HH:mm").unix() -
+            moment(b.date, "D.MM.YYYY HH:mm").unix()
+        );
+      }
+    };
+
     const renderElement = (arrayList) => {
+      displayAmountOfEvent(arrayList);
+      sortList(arrayList);
+      let oldEvent = arrayList.filter(
+        (workshop) =>
+          moment(workshop.date, "D.MM.YYYY HH:mm").unix() < moment().unix()
+      );
+      let newEvent = arrayList.filter(
+        (workshop) =>
+          moment(workshop.date, "D.MM.YYYY HH:mm").unix() > moment().unix()
+      );
       let contenerList = ``;
+      let workshopClass = "";
+
       if (!arrayList.length) {
         renderEmpty();
       } else {
-        arrayList.forEach((workshop) => {
+        newEvent.forEach((workshop) => {
           const tags = workshop.tag.reduce(
             (result, tagg) =>
               `${result}<div class="tag__single tag__single--small">${tagg}</div>`,
             ""
           );
+          if (
+            moment(workshop.date, "D.MM.YYYY HH:mm").unix() < moment().unix()
+          ) {
+            workshopClass = "lecture lecture--nonActive";
+          } else {
+            workshopClass = "lecture";
+          }
+
           const currentHtml = `
-      <div class="lecture">
+      <div class="${workshopClass}">
+       <div class="lecture__half">
+         <img class="lecture__image" src="${workshop.img}" alt="" />
+         <div class="lecture__description">
+           <div class="lecture__tags"> ${tags}
+           </div>
+
+           <div class="level level__basic">${workshop.skill}</div>
+           <div class="lecture__title">
+           ${workshop.title}
+           </div>
+           <a href="${
+             workshop.url
+           }" target="_blank" class="lecture__join buttonDesktop">Dowiedz się więcej</a>
+          
+         </div>
+       </div>
+       <div class="lecture__half lecture__rightGrid">
+         <div class="lecture__rightGrid__borderAndSpacing">
+           <span class="lecture__rightGrid--span">Prowadzący</span>${
+             workshop.speaker
+           }
+         </div>
+         <div class="lecture__rightGrid__borderAndSpacing">
+           <span class="lecture__rightGrid--span">Data</span>${workshop.date}
+         </div>
+         <div>
+           <span class="lecture__rightGrid--span">Czas Trwania</span>${formatDuration(
+             workshop
+           )}
+         </div>
+         <div class="lecture__rightGrid__borderAndSpacing">
+           <span class="lecture__rightGrid--span">Lokalizacja</span>${
+             workshop.location
+           }
+         </div>
+         <div class="lecture__rightGrid__borderAndSpacing">
+           <span class="lecture__rightGrid--span">Typ</span>${workshop.type}
+         </div>
+         <div>
+           <span class="lecture__rightGrid--span">Liczba Miejsc</span>${
+             workshop.spots
+           }
+         </div>
+         <div class="lecture__rightGrid__price">${displayPriceWithCurrency(
+           workshop
+         )}</div>
+       </div>
+       <div class="lecture__half buttonMobile">
+          <a href="${
+            workshop.url
+          }" class="lecture__join buttonMobile__cta">Dowiedz się więcej</a>
+        </div>
+     </div>`;
+          contenerList += currentHtml;
+        });
+        contenerList += `<div class="pastEvent">Ubiegłe wydarzenia</div>`;
+        oldEvent.forEach((workshop) => {
+          const tags = workshop.tag.reduce(
+            (result, tagg) =>
+              `${result}<div class="tag__single tag__single--small">${tagg}</div>`,
+            ""
+          );
+          if (
+            moment(workshop.date, "D.MM.YYYY HH:mm").unix() < moment().unix()
+          ) {
+            workshopClass = "lecture lecture--nonActive";
+          } else {
+            workshopClass = "lecture";
+          }
+
+          const currentHtml = `
+      <div class="${workshopClass}">
        <div class="lecture__half">
          <img class="lecture__image" src="${workshop.img}" alt="" />
          <div class="lecture__description">
@@ -222,7 +334,7 @@ const sentEventClick = (eventName) => {
           contenerList += currentHtml;
         });
       }
-      //litwrówka + consty :P
+
       const single = document.getElementById("lecture");
       single.innerHTML = contenerList;
     };
@@ -239,8 +351,13 @@ const sentEventClick = (eventName) => {
         }
       } else if (event.target.classList.contains("tagsFilter")) {
         filterElement(event);
+      } else if (event.target.classList.contains("sortSettingsTrue")) {
+        sortSettings = true;
+        filterElement(event);
+      } else if (event.target.classList.contains("sortSettingsFalse")) {
+        sortSettings = false;
+        filterElement(event);
       }
-      console.log("return false");
       return false;
     });
   });

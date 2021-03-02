@@ -688,6 +688,10 @@ input {
   }
 }
 
+.lecture--nonActive {
+  opacity: 30%;
+}
+
 .lecture__half {
   display: -webkit-box;
   display: -ms-flexbox;
