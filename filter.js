@@ -261,7 +261,7 @@ const sentEventClick = (eventName) => {
      </div>`;
           contenerList += currentHtml;
         });
-        contenerList += `<div class="pastEvent">Ubiegłe wydarzenia</div>`;
+        contenerList += `<div class="pastEvent text__h6">Ubiegłe wydarzenia</div>`;
         oldEvent.forEach((workshop) => {
           const tags = workshop.tag.reduce(
             (result, tagg) =>
@@ -353,9 +353,18 @@ const sentEventClick = (eventName) => {
         filterElement(event);
       } else if (event.target.classList.contains("sortSettingsTrue")) {
         sortSettings = true;
+        event.target.classList.add("sortElement__sortButton--active");
+        document
+          .querySelector(".sortSettingsFalse")
+          .classList.remove("sortElement__sortButton--active");
+        console.log(document.querySelector(".sortSettingsFalse"));
         filterElement(event);
       } else if (event.target.classList.contains("sortSettingsFalse")) {
         sortSettings = false;
+        event.target.classList.add("sortElement__sortButton--active");
+        document
+          .querySelector(".sortSettingsTrue")
+          .classList.remove("sortElement__sortButton--active");
         filterElement(event);
       }
       return false;

@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>DesignWays Hub - edukacyjny hub dla designerów</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -44,14 +43,13 @@
       @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
     </style>
     <link rel="stylesheet" href="main.css" />
-    <script src="filter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
     <script>
       let magic = new Magic("pk_live_6A8CF7F906BC895E");
 
-      const render = async () => {
-        const isLoggedIn = await magic.user.isLoggedIn();
-        console.log(isLoggedIn);
+      // const render = async () => {
+      //   const isLoggedIn = await magic.user.isLoggedIn();
+      //   console.log(isLoggedIn);
       //   if (!isLoggedIn) {
       //     window.location.replace(`https://hub.designways.io/`);
       //   }
@@ -154,9 +152,14 @@
         </div>
       </div>
     </div>
-    <div class="container container--big">
-     
-     W naszej bazie mamy <span id="eventNumber"></span> <button class="sortSettingsTrue">Cena: Malejąco</button> <button class="sortSettingsFalse">Data: Najblisze</button>
+    <div class="container container--big sortElement">
+     <div class="sortElement__countEvents text__h6">Liczba znalezionych wydarzeń:  <span id="eventNumber"></span> 
+      </div>
+     <div class="sortElement__sortButtonContainer"> 
+      <button class="sortSettingsTrue sortElement__sortButton  text__h6">Cena: Rosnąco</button> 
+      <button class="sortSettingsFalse sortElement__sortButton sortElement__sortButton--active text__h6">Data: Najbliższa</button>
+    </div>
+   
       
     </div>
     <div class="container container--big" id="lecture">
@@ -214,5 +217,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>
