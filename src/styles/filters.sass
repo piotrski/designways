@@ -24,7 +24,6 @@
             margin-top: -130px
 
 .tag
-    &__container
     &__single
         background: rgba(232, 230, 243, 0.6)
         border: none
@@ -90,9 +89,6 @@
         padding: 15px
     &--nonActive
         opacity: 30%
-        transition: 0.5s ease
-        &:hover
-            opacity: 100%
     &__half
         display: flex
         flex-direction: row
@@ -233,7 +229,6 @@
         align-items: center
         color: #3FD59F
 .AddToDatabase
-    box-sizing:
     display: flex
     flex-direction: row
     justify-content: space-evenly
@@ -350,37 +345,6 @@
         line-height: 100%
         letter-spacing: 0.02em
         color: #8A8CB9
-.pastEvent
-    margin: 40px
-.sortElement
-    flex-direction: row
-    justify-content: space-between
-    @media (max-width: 768px)
-        flex-direction: column
-    &__sortButtonContainer
-        @media (max-width: 768px)
-            display: flex
-            width: 100%
-            flex-direction: row
-            justify-content: space-evenly
-    &__sortButton
-        background-color: transparent
-        border: none
-        line-height: 150%
-        width: auto
-        padding: 0
-        color: #7D4CE5
-        cursor: pointer
-        padding-bottom: 2px
-        font-weight: bold
-
-        margin: 20px 0 20px 40px
-        @media (max-width: 768px)
-            margin: 20px 0
-
-        &--active
-            border-bottom: 1px solid #2C2856
-            color: #2C2856
 
 .buttonDesktop
     @media (max-width: 992px)
