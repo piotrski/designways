@@ -1,4 +1,4 @@
 [[plugins]]
-packacge = "next-on-netlify"
+package = "next-on-netlify"
 [[plugins]]
 package = "netlify-plugin-cache-nextjs"
