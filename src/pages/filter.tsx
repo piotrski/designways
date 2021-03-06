@@ -1,14 +1,13 @@
-import { Head } from '../components/Head'
-import { Footer } from '../components/Footer'
-import { AuthChecker } from '../components/AuthChecker'
+import { Head } from "../components/Head";
+import { Footer } from "../components/Footer";
+import { AuthChecker } from "../components/AuthChecker";
 
 export default function Filter() {
   return (
-    <>
+    <AuthChecker>
       <Head />
-      
+      {/* do odtworzenia */}
       <Footer />
-    </>
-
-  )
+    </AuthChecker>
+  );
 }

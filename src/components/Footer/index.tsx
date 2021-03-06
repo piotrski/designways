@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 import Logo from '../../images/Logo_horizontal_new.svg'
+import InstagramLogo from '../../images/instagram-dark.svg'
+import FacebookLogo from '../../images/facebook-dark.svg'
 
 export const Footer = () => {
   return (
@@ -29,10 +31,10 @@ export const Footer = () => {
         </p>
         <div className="filterFooter__socialMedia">
           <a href="https://www.facebook.com/designwaysconf">
-            <Image src="/../../images/facebook-dark.svg" width={50} height={50} />
+            <img src={InstagramLogo} alt=""/>
           </a>
           <a href="https://www.instagram.com/designwaysconf/">
-            <img src="images/instagram-dark.svg" alt="" />
+            <img src={FacebookLogo} alt="" />
           </a>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import '../styles/main.sass'
-import '../styles/filters.sass'
+import "../styles/main.sass";
+import "../styles/filters.sass";
 
 function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default App
+export default App;

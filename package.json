@@ -5,14 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write src/**/*.ts{,x}",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --config .eslintrc.js"
   },
   "dependencies": {
     "magic-sdk": "^4.1.1",
-    "netlify-plugin-cache-nextjs": "^1.5.2",
     "next": "10.0.7",
     "next-images": "^1.7.0",
-    "next-on-netlify": "^2.9.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
@@ -20,6 +20,16 @@
     "@testing-library/react": "^11.2.5",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-prettier": "^3.3.1",
+    "netlify-plugin-cache-nextjs": "^1.5.2",
+    "next-on-netlify": "^2.9.0",
+    "prettier": "^2.2.1",
     "sass": "^1.32.8",
     "typescript": "^4.2.3"
   }

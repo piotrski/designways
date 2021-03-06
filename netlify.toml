@@ -1,0 +1,4 @@
+[[plugins]]
+packacge = "next-on-netlify"
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
