@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "eslint --config .eslintrc.js src/**/*.ts{,x} "
+    "lint": "eslint --config .eslintrc.js src/**/*.ts{,x} ",
+    "pre-commit": "echo \"this should fail\" && exit 1"
+
   },
   "dependencies": {
     "magic-sdk": "^4.1.1",
