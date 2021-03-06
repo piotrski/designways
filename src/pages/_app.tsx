@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from "react"
 import "../styles/main.sass";
 import "../styles/filters.sass";
 

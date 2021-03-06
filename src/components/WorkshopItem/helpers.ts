@@ -8,7 +8,7 @@ export const formatPriceWithCurrency = (event: Workshop) => {
 };
 
 export const formatDuration = (event: Workshop) => {
-  let duration = event.duration.split(":");
+  const duration = event.duration.split(":");
   return `${duration[0]} h ${duration[1]} min`;
 };
 

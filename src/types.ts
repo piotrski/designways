@@ -6,8 +6,8 @@ export type Workshop = {
   date: string;
   location: string;
   type: string;
-  cost: Number;
+  cost: number;
   url: string;
-  spots: Number;
+  spots: number;
   duration: string;
 };
