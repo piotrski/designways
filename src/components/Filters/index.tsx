@@ -1,8 +1,16 @@
 import React from "react";
 
-export const Filters = () => {
+
+export class Filters extends React.Component  {
+   state = {
+    tags: {},
+    level: {},
+    price: {},
+  };
+  render(){
   return (
     <>
+    
     <div className="container container--xl filter__main">
     <div className="tag__container">
       <h6 className="text__h6">Wybierz tematyke</h6>
@@ -72,6 +80,6 @@ export const Filters = () => {
     </>
     )
   
-  
+  }
   }
   
