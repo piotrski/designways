@@ -4,21 +4,18 @@ import { Footer } from "../components/Footer";
 import { AuthChecker } from "../components/AuthChecker";
 import { HeaderFilter } from "../components/HeaderFilter";
 import { Filters } from "../components/Filters";
-import { fetchEntries } from '../util/contentfulPosts'
-import Post from '../components/Post'
-
-console.log('dsad')
+import { getEvents, getTags, getLevel } from '../util/contentfulPosts'
 
 
 
-export default function Filter({posts}) {
+
+export default function Filter({posts, tags, levels}) {
   return (
     <AuthChecker>
       <Head />
       <HeaderFilter />
-      <Filters/>
+      <Filters posts={posts} tags={tags} levels={levels}/>
       
-  {/* {console.log(posts)} */}
       <Footer />
     </AuthChecker>
   );
@@ -26,14 +23,25 @@ export default function Filter({posts}) {
 
 
 export async function getStaticProps() {
-  const res = await fetchEntries()
+  const res = await getEvents()
+  const resTag = await getTags()
+  const resLvl = await getLevel()
   const posts = await res.map((p) => {
     return p.fields
   })
+  const tags = await resTag.map((p) => {
+    return p.fields
+  })
+  const levels = await resLvl.map((p) => {
+    return p.fields
+  })
+
 
   return {
     props: {
+      tags,
       posts,
-    },
+      levels,
+    }
   }
 }
