@@ -7,21 +7,17 @@ type Props = {
   customClass: string
 };
 
-export const WorkshopItem = (props) => {
+export const WorkshopItem = ({ workshop, customClass }: Props) => {
   return (
-    <div className="lecture">
-
+    <div className={customClass}>
       <div className="lecture__half">
-        <img className="lecture__image" src={props.post.image.fields.file.url} alt={props.post.title}  />
+        <img className="lecture__image" src="${workshop.img}" alt="" />
         <div className="lecture__description">
-          <div className="lecture__tags"> {props.post.tags.map(singleTag => (
-            <div class="tag__single tag__single--small">{singleTag.fields.name}</div>
-          ))}
-          </div>
-          <div className="level level__basic">{props.post.level.fields.name}</div>
-          <div className="lecture__title">{props.post.title} </div>
+          <div className="lecture__tags"> {workshop.tags}</div>
+          <div className="level level__basic">{workshop.skill}</div>
+          <div className="lecture__title">{workshop.title}</div>
           <a
-            href=""
+            href={workshop.url}
             target="_blank"
             className="lecture__join buttonDesktop"
           >
@@ -31,38 +27,33 @@ export const WorkshopItem = (props) => {
       </div>
       <div className="lecture__half lecture__rightGrid">
         <div className="lecture__rightGrid__borderAndSpacing">
-          <span className="lecture__rightGrid--span">Prowadzący</span>
-          {props.post.speaker}
+          <span className="lecture__rightGrid--span">Prowadzący</span>$
+          {workshop.speaker}
         </div>
         <div className="lecture__rightGrid__borderAndSpacing">
-          <span className="lecture__rightGrid--span">Data</span>
-          {props.post.startDate}
+          <span className="lecture__rightGrid--span">Data</span>{workshop.date}
         </div>
         <div>
           <span className="lecture__rightGrid--span">Czas Trwania</span>
-          {formatDuration(props.post.duration)}
-          
+          {formatDuration(workshop)}
         </div>
         <div className="lecture__rightGrid__borderAndSpacing">
           <span className="lecture__rightGrid--span">Lokalizacja</span>
-          {props.post.location}
-          
+          {workshop.location}
         </div>
         <div className="lecture__rightGrid__borderAndSpacing">
-          <span className="lecture__rightGrid--span">Typ</span>
-          {props.post.type}
+          <span className="lecture__rightGrid--span">Typ</span>{event.type}
         </div>
         <div>
           <span className="lecture__rightGrid--span">Liczba Miejsc</span>
-          {props.post.spots}
-        
+          {workshop.spots}
         </div>
         <div className="lecture__rightGrid__price">
-          {formatPriceWithCurrency(props.post.price)}
+          ${formatPriceWithCurrency(workshop)}
         </div>
       </div>
       <div className="lecture__half buttonMobile">
-        <a className="lecture__join buttonMobile__cta" href="">
+        <a className="lecture__join buttonMobile__cta" href={workshop.url}>
           Dowiedz się więcej
         </a>
       </div>

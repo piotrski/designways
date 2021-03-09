@@ -4,13 +4,34 @@ import { WorkshopItem } from "../WorkshopItem";
 
 export class Filters extends React.Component  {
    state = {
-    tags: {},
+    tags: [],
     level: {},
     price: {},
   };
   toggleClass = (e) => {
-      e.target.classList.toggle("tag__single--active");
-    };
+    e.target.classList.toggle("tag__single--active");
+  };
+  getDataSetTag = (e) => {
+    const tagsList = [...this.state.tags];
+    const value = e.target.dataset.key.toString();
+    console.log(e.target.dataset)
+    tagsList.includes(value)
+    ? this.setState({ tags: (tagsList.filter(element => element !== value)) })
+      : this.setState({ tags: [...tagsList, value] })
+    this.toggleClass(e);
+  }
+
+
+  toggleValue = (array, value, ) => {
+    array.includes(value)
+      ? this.setState({ tags: (array.filter(element => element !== value)) })
+      : this.setState({ tags: [...array, value] })
+  }
+
+  renderAll = () => {
+    
+  }
+  
   render(){
     const posts = this.props.posts
     const levels = this.props.levels
@@ -22,7 +43,7 @@ export class Filters extends React.Component  {
       <h6 className="text__h6">Wybierz tematyke</h6>
       <div className="tag__tags">
       {tags.map(tag => (
-              <TagButton tagName={tag.name} />
+              <TagButton toggleClass={this.toggleClass} getDataSetTag={this.getDataSetTag} tagName={tag.name} />
          
         ))}
       </div>
@@ -32,7 +53,7 @@ export class Filters extends React.Component  {
       <div className="tag__tags">
   
         {levels.map(level => (
-              <TagButton levelName={level.name} />
+              <TagButton toggleClass={this.toggleClass} getDataSetTag={this.getDataSetTag} levelName={level.name} />
          
         ))}
       </div>
@@ -40,8 +61,8 @@ export class Filters extends React.Component  {
     <div className="tag__container">
       <h6 className="text__h6">Cena:</h6>
       <div className="tag__tags">
-        <TagButton priceName={"Darmowe"} />
-        <TagButton priceName={"Platne"} />
+        <TagButton toggleClass={this.toggleClass} priceName={"Darmowe"} />
+        <TagButton toggleClass={this.toggleClass} priceName={"Platne"} />
       </div>
     </div>
     </div>
@@ -53,14 +74,15 @@ export class Filters extends React.Component  {
      <button className="sortSettingsFalse sortElement__sortButton sortElement__sortButton--active text__h6">Data: Najbliższa</button>
         </div>
         
-        {/* {
-          posts.map(post => (
-            <WorkshopItem />
-
-          ))
-        } */}
      
-   </div>
+      </div>
+      <div class="container container--big" id="lecture">
+        {posts.map(post => (
+          <WorkshopItem post={post} />
+
+        ))}
+     
+     </div>
     </>
     )
   
