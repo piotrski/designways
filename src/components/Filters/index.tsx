@@ -99,16 +99,22 @@ export class Filters extends React.Component  {
      <button className="sortSettingsFalse sortElement__sortButton sortElement__sortButton--active text__h6">Data: Najbliższa</button>
         </div>
         
-        {/* // <WorkshopItem post={post} /> */}
 
       </div>
       <div class="container container--big" id="lecture">
         {
-          posts.map(post => (
-            console.log(oldEvents)
+          onGoingEvents.map(post => (
+            <WorkshopItem post={post} /> 
 
-        ))}
-     
+          ))}
+        
+        {!oldEvents ? null : <div className="pastEvent text__h6"> Ubiegłe wydarzenia
+ </div>}
+        {
+          oldEvents.map(post => (
+            <WorkshopItem oldEvent={true} post={post} />
+
+          ))}
      </div>
     </>
     )

@@ -9,7 +9,7 @@ type Props = {
 
 export const WorkshopItem = (props) => {
   return (
-    <div className="lecture">
+    <div className={props.oldEvent ? "lecture lecture--nonActive" : "lecture" }>
 
       <div className="lecture__half">
         <img className="lecture__image" src={props.post.image.fields.file.url} alt={props.post.title}  />
