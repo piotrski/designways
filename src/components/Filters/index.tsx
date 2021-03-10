@@ -7,8 +7,8 @@ export class Filters extends React.Component  {
    state = {
     tags: [],
     level: [],
-     price: [],
-    sort: [],
+    price: [],
+    sort: false,
   };
   toggleClass = (e) => {
     e.target.classList.toggle("tag__single--active");
@@ -46,20 +46,38 @@ export class Filters extends React.Component  {
       ? this.setState({ tags: (array.filter(element => element !== value)) })
       : this.setState({ tags: [...array, value] })
   }
+  setSort = () =>{
+    this.setState({sort: !this.state.sort })
+  }
+  checkSort = (arrayList, old) => {
+     if (this.state.sort) {
+        return arrayList.sort((a, b) => a.price - b.price);
+      } 
+      if(old)
+      {
+          return arrayList.sort(
+          (a, b) =>
+            dayjs(a.startDate).unix() -
+            dayjs(b.startDate).unix()
+        ).reverse();
+      } 
+       
+        return arrayList.sort(
+          (a, b) =>
+            dayjs(a.startDate).unix() -
+            dayjs(b.startDate).unix()
+        );
+  
+      
+  }
 
-  oldEvent = () => {
-     
-  }
-  ongoingEvent = () => {
-    
-  }
   
   render(){
     const posts = this.props.posts
     const levels = this.props.levels
     const tags = this.props.tags
-    const oldEvents = posts.filter(post => dayjs(post.startDate).unix() < dayjs().unix())
-    const onGoingEvents = posts.filter(post => dayjs(post.startDate).unix() > dayjs().unix())
+    const oldEvents = this.checkSort(posts.filter(post => dayjs(post.startDate).unix() < dayjs().unix()), true)
+    const onGoingEvents = this.checkSort(posts.filter(post => dayjs(post.startDate).unix() > dayjs().unix()), false)
 
   return (
     <>
@@ -95,8 +113,8 @@ export class Filters extends React.Component  {
         <div className="sortElement__countEvents text__h6">Liczba znalezionych wydarzeń:  <span id="eventNumber">{posts.length}</span>
      </div>
     <div className="sortElement__sortButtonContainer"> 
-     <button className="sortSettingsTrue sortElement__sortButton  text__h6 {}">Cena: Rosnąco</button> 
-     <button className="sortSettingsFalse sortElement__sortButton sortElement__sortButton--active text__h6">Data: Najbliższa</button>
+     <button className={this.state.sort ? "sortElement__sortButton  text__h6" : "sortElement__sortButton sortElement__sortButton--active text__h6"} onClick={this.setSort}>Cena: Rosnąco</button> 
+     <button className={this.state.sort ? "sortElement__sortButton sortElement__sortButton--active text__h6" : "sortElement__sortButton  text__h6"} onClick={this.setSort}>Data: Najbliższa</button>
         </div>
         
 

@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import React from "react";
 import { Workshop } from "../../types";
 import { formatDuration, formatPriceWithCurrency } from "./helpers";
@@ -36,7 +37,7 @@ export const WorkshopItem = (props) => {
         </div>
         <div className="lecture__rightGrid__borderAndSpacing">
           <span className="lecture__rightGrid--span">Data</span>
-          {props.post.startDate}
+          {dayjs(props.post.startDate).format('DD.MM.YYYY - HH:mm' )}
         </div>
         <div>
           <span className="lecture__rightGrid--span">Czas Trwania</span>
