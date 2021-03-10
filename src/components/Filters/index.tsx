@@ -5,13 +5,32 @@ import { WorkshopItem } from "../WorkshopItem";
 export class Filters extends React.Component  {
    state = {
     tags: [],
-    level: {},
-    price: {},
+    level: [],
+     price: [],
+    sort: [],
   };
   toggleClass = (e) => {
     e.target.classList.toggle("tag__single--active");
   };
   getDataSetTag = (e) => {
+    const tagsList = [...this.state.tags];
+    const value = e.target.dataset.key.toString();
+    console.log(e.target.dataset)
+    tagsList.includes(value)
+    ? this.setState({ tags: (tagsList.filter(element => element !== value)) })
+      : this.setState({ tags: [...tagsList, value] })
+    this.toggleClass(e);
+  }
+  getDataSetLevel = (e) => {
+    const tagsList = [...this.state.tags];
+    const value = e.target.dataset.key.toString();
+    console.log(e.target.dataset)
+    tagsList.includes(value)
+    ? this.setState({ tags: (tagsList.filter(element => element !== value)) })
+      : this.setState({ tags: [...tagsList, value] })
+    this.toggleClass(e);
+  }
+  getDataSetLevel = (e) => {
     const tagsList = [...this.state.tags];
     const value = e.target.dataset.key.toString();
     console.log(e.target.dataset)
@@ -77,7 +96,8 @@ export class Filters extends React.Component  {
      
       </div>
       <div class="container container--big" id="lecture">
-        {posts.map(post => (
+        {
+          posts.map(post => (
           <WorkshopItem post={post} />
 
         ))}
